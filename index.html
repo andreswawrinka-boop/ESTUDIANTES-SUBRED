@@ -1350,7 +1350,7 @@ if(window.speechSynthesis){
 const SVG_PDF = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
 
 function semLabel(n, label, color, bg, border){
-  const num = n ? `Semana ${n} — ` : '';
+  const num = '';
   return `<div class="tall-semana-titulo">
     <div class="tall-semana-linea" style="background:linear-gradient(90deg,transparent,${border})"></div>
     <span class="tall-semana-lbl" style="color:${color};background:${bg};border-color:${border};font-family:'Bebas Neue',sans-serif;font-size:27px;letter-spacing:2px;padding:9px 28px;box-shadow:0 6px 20px ${border}66">${num}${label}</span>
@@ -1417,9 +1417,8 @@ const SHARED_HTML = `
       <div class="sec-stripe" style="background:#0D47A1"></div>
       <div class="sec-info">
         <div class="sec-label">Talleres teórico-prácticos</div>
-        <div class="sec-desc">Universales — el mismo taller aplica para todas las universidades</div>
       </div>
-      <div class="sec-tag">6 talleres · PDF descargable</div>
+      <div class="sec-tag">PDF descargable</div>
     </div>
     <div class="tall-note" style="align-items:flex-start"><span style="line-height:1.6">Cada taller tiene en la parte superior <strong>dos botones</strong>: <strong>Teoría</strong> (el contenido para estudiar) y <strong>Taller integrado</strong> (la parte práctica que debes desarrollar). En la parte final encuentras el apartado para <strong>descargar el PDF</strong>, que debes subir a Google Classroom antes del domingo 23:59 h de cada semana.</span></div>
     <div class="tall-grupos">
@@ -1828,7 +1827,7 @@ const SHARED_HTML = `
 
     <details class="faq-item" style="--faq-c:#6A1B9A">
       <summary><span class="faq-q-ico">📗</span>¿Cuándo y dónde entrego los talleres?<span class="faq-chev">▶</span></summary>
-      <div class="faq-body">Cada semana el plazo máximo es el <b>domingo a las 23:59 h</b>, vía <b>Google Classroom</b>. Los talleres de la <b>semana final</b> se entregan a más tardar el <b>último día de tu rotación</b>. Los 6 talleres son universales para todas las universidades.</div>
+      <div class="faq-body">Cada semana el plazo máximo es el <b>domingo a las 23:59 h</b>, vía <b>Google Classroom</b>. Los talleres de la <b>semana final</b> se entregan a más tardar el <b>último día de tu rotación</b>.</div>
     </details>
 
     <details class="faq-item" style="--faq-c:#C62828">
@@ -2402,8 +2401,6 @@ document.addEventListener('keydown', ev=>{
   <p>En la sección <b>Cronogramas</b> encontrarás el programa específico de <b>tu universidad</b>: fechas de talleres, del examen final y del seminario de integración clínica.</p>
   <h3>Distribución</h3>
   <p>En <b>Distribución</b> verás en qué <b>sala quirúrgica o actividad</b> estás asignado cada día. Revísala siempre antes de llegar al hospital.</p>
-  <h3>Los 6 talleres universales</h3>
-  <p>Los <b>6 talleres</b> son <b>universales para todas las universidades</b>. Descárgalos desde el portal, desarróllalos y súbelos a <b>Google Classroom</b>.</p>
   <div class="nb-note"><b>→</b> Consulta el portal a diario: cronograma, distribución y talleres pueden actualizarse durante la rotación.</div>
 </div><div class="nb-pfoot"><span>Instrucciones de la Rotación · Anestesiología</span><span>Página 1 de 5</span></div></div>
 

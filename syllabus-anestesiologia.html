@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syllabus · Rotación de Anestesiología · Dr. Andrés Robayo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F7; --surf:#fff; --txt:#0D1B2A; --brd:rgba(0,0,0,.12);
+  --navy:#0f2744; --navy-mid:#1a3a5c; --teal:#0d7a6e; --amber:#E65100; --red:#C62828;
+  --purple:#6A1B9A; --green:#2E7D32; --indigo:#1e3a8a; --gold:#FFD740;
+  --sans:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+  --hero:linear-gradient(135deg,#050F2C,#0f2744,#0d7a6e);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);font-size:10.5pt;color:var(--txt);background:var(--bg);line-height:1.65}
+.page{max-width:1040px;margin:22px auto 60px;background:var(--surf);border-radius:22px;box-shadow:0 8px 40px rgba(13,27,42,.10);overflow:hidden;border:1px solid var(--brd)}
+.cover{background:var(--hero);color:#fff;padding:44px 48px 36px;position:relative}
+.cover-tag{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.cover h1{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:46px;letter-spacing:2px;line-height:1.02}
+.cover h1 em{font-style:normal;background:linear-gradient(90deg,#FFD740,#FF6D00,#FF1744);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cover-sub{font-size:11.5pt;margin-top:10px;color:#fff;max-width:760px}
+.cover-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;border-top:1px solid rgba(255,255,255,.3);padding-top:16px}
+.cover-meta span{display:block}
+.ml{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+.mv{font-weight:700;font-size:10pt;color:#fff}
+.content{padding:30px 44px 40px}
+h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:26px;letter-spacing:1.5px;color:var(--navy);margin:30px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{font-family:var(--mono);font-size:11px;background:var(--navy);color:#fff;padding:4px 10px;border-radius:8px;letter-spacing:0}
+h3{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin:16px 0 8px}
+p{margin-bottom:8px}
+.lead{font-size:11pt}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border:2px solid var(--navy);border-radius:14px;padding:16px 18px;background:#fff}
+.card-t{font-weight:800;color:var(--navy);margin-bottom:6px;font-size:10.5pt}
+ul.list{list-style:none}
+ul.list li{padding-left:18px;position:relative;margin-bottom:5px}
+ul.list li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+
+/* selector */
+.picker{background:var(--navy);border-radius:16px;padding:18px 20px;color:#fff;margin:6px 0 18px}
+.picker-t{font-weight:800;font-size:11pt;margin-bottom:10px}
+.pbtns{display:flex;gap:8px;flex-wrap:wrap}
+.pbtn{font-family:var(--sans);font-weight:800;font-size:11pt;border:2px solid #fff;background:transparent;color:#fff;border-radius:12px;padding:9px 16px;cursor:pointer;transition:transform .12s}
+.pbtn:hover{transform:translateY(-2px)}
+.pbtn.on{background:var(--gold);border-color:var(--gold);color:#000}
+.picker-msg{margin-top:12px;font-size:10.5pt}
+.picker-msg b{color:var(--gold)}
+
+/* timeline */
+.weeks{display:flex;flex-direction:column;gap:14px}
+.week{border-radius:16px;overflow:hidden;border:2px solid var(--c);background:#fff;transition:opacity .2s, filter .2s}
+.week.off{border-style:dashed}
+.week.off .week-h::after{content:"CONSULTA OPCIONAL";font-family:var(--mono);font-size:10px;font-weight:600;background:#000;color:var(--gold);padding:4px 9px;border-radius:8px}
+.week-h{background:var(--c);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 18px;flex-wrap:wrap}
+.wk{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;line-height:1;min-width:92px}
+.wk small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:1.5px}
+.wt{font-weight:800;font-size:13pt;flex:1;min-width:220px}
+.wtag{font-family:var(--mono);font-size:10px;background:#fff;color:var(--c);padding:4px 9px;border-radius:8px;font-weight:600}
+.week-b{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;padding:14px 18px 16px}
+.week-b h4{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--c);margin:4px 0 6px}
+.week-b ul{padding-left:18px}
+.week-b li{margin-bottom:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1.5px solid var(--c);color:var(--txt);border-radius:999px;padding:2px 10px;font-size:9pt;font-weight:600}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.fact{border:1.5px solid var(--c);border-radius:10px;padding:7px 10px}
+.fact .k{font-family:var(--mono);font-size:8.5pt;color:var(--c);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.fact .v{font-weight:800;font-size:11pt}
+
+/* matrix */
+.mx{width:100%;border-collapse:collapse;font-size:10pt;border:2px solid var(--navy);border-radius:12px;overflow:hidden}
+.mx th{background:var(--navy);color:#fff;padding:9px 10px;text-align:center;font-weight:700}
+.mx th:first-child,.mx td:first-child{text-align:left}
+.mx td{padding:8px 10px;border-bottom:1px solid var(--brd);text-align:center}
+
+.mx .y{color:var(--green);font-weight:800;font-size:12pt}
+.mx .n{color:var(--red);font-weight:800}
+.mx td.sel,.mx th.sel{outline:3px solid var(--gold);outline-offset:-3px}
+.tw{overflow-x:auto;border-radius:12px}
+
+.callout{border-left:5px solid var(--amber);background:#FFF3E0;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+.callout.t{border-color:var(--teal);background:#E6F4F2}
+.callout-t{font-weight:800;text-transform:uppercase;font-size:10px;letter-spacing:1px;margin-bottom:4px;color:var(--amber)}
+.callout.t .callout-t{color:var(--teal)}
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;padding-left:38px;position:relative;margin-bottom:10px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:10pt}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 44px;border-top:2px solid var(--navy);font-size:9pt}
+footer b{color:var(--navy)}
+.print{position:absolute;top:18px;right:20px;background:#fff;color:var(--navy);border:none;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-family:var(--sans)}
+@media(max-width:760px){
+  .page{margin:0;border-radius:0}
+  .cover{padding:56px 16px 24px}.cover h1{font-size:36px}
+  .cover-meta{grid-template-columns:1fr 1fr}
+  .content{padding:18px 16px 30px} footer{padding:16px}
+  .grid2,.week-b{grid-template-columns:1fr}
+  .wk{min-width:auto}
+}
+@media print{
+  body{background:#fff}.page{box-shadow:none;margin:0;border:none;max-width:none}
+  .print,.picker{display:none}
+  .week{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="cover">
+  <button class="print" onclick="window.print()">🖨 Imprimir / PDF</button>
+  <div class="cover-tag">Syllabus · Pregrado de Medicina</div>
+  <h1>Rotación de <em>Anestesiología</em></h1>
+  <div class="cover-sub">Programa de talleres semanales con teoría y práctica autocalificable: un tema por semana, en el orden en que se construye una anestesia segura.</div>
+  <div class="cover-meta">
+    <div><span class="ml">Coordinador académico</span><span class="mv">Dr. Andrés Robayo C.</span></div>
+    <div><span class="ml">Sedes</span><span class="mv">Hospital de Kennedy · Hospital de Bosa</span></div>
+    <div><span class="ml">Institución</span><span class="mv">Subred Integrada Sur Occidente</span></div>
+    <div><span class="ml">Duración</span><span class="mv">2 a 6 semanas · 1 taller por semana</span></div>
+  </div>
+</div>
+
+<div class="content">
+
+<h2><span class="num">01</span>Propósito de la rotación</h2>
+<p class="lead">Que el estudiante comprenda los fundamentos fisiológicos y farmacológicos de la anestesia y los aplique con seguridad en el paciente quirúrgico: <strong>oxigenar y asegurar la vía aérea</strong>, <strong>dosificar correctamente</strong> hipnóticos, opioides, relajantes, benzodiacepinas, anestésicos inhalados y locales, <strong>controlar el dolor y la NVPO</strong>, <strong>manejar los líquidos</strong> y <strong>valorar y preparar al paciente</strong> antes de la cirugía.</p>
+<div class="grid2">
+  <div class="card"><div class="card-t">Competencias generales</div>
+    <ul class="list">
+      <li>Calcula dosis, concentraciones, volúmenes e infusiones con análisis dimensional y sin errores de unidades.</li>
+      <li>Reconoce y prioriza las situaciones que amenazan la vida en el perioperatorio (hipoxemia, vía aérea difícil, toxicidad, shock).</li>
+      <li>Selecciona fármacos y técnicas según el paciente y justifica la elección con evidencia actual.</li>
+      <li>Integra la información en casos clínicos completos, como en la práctica real.</li>
+    </ul></div>
+  <div class="card"><div class="card-t">Actitudes esperadas</div>
+    <ul class="list">
+      <li>Seguridad del paciente como primer criterio de decisión.</li>
+      <li>Puntualidad y participación activa en sala de cirugía y recuperación.</li>
+      <li>Honestidad académica: el taller es individual.</li>
+      <li>Trabajo en equipo con anestesiólogos, cirujanos, enfermería e instrumentación.</li>
+    </ul></div>
+</div>
+
+<h2><span class="num">02</span>¿Cuántas semanas dura su rotación?</h2>
+<div class="picker">
+  <div class="picker-t">Seleccione la duración de su rotación para ver los talleres que le corresponden:</div>
+  <div class="pbtns" id="pbtns"></div>
+  <div class="picker-msg" id="pmsg"></div>
+</div>
+
+<div class="weeks" id="weeks"></div>
+
+<h2><span class="num">03</span>Talleres y exámenes según la duración de la rotación</h2>
+<div class="tw"><table class="mx" id="mx"></table></div>
+<p style="margin-top:8px;font-size:9.5pt;">Cada semana adicional de rotación agrega el taller siguiente en el orden del programa. Actualmente: El Bosque 4 semanas, UDCA 6 semanas y las demás universidades 2–3 semanas.</p>
+
+<h2><span class="num">04</span>Metodología de cada semana</h2>
+<ol class="steps">
+  <li><strong>Lea la teoría</strong> de la guía de la semana (pestaña «Teoría»). Está organizada en el orden en que se aplica en quirófano y usa evidencia actual.</li>
+  <li><strong>Aplíquela en la práctica diaria:</strong> identifique en sus pacientes lo que estudió (vía aérea, fármacos, líquidos, dolor, valoración) y pregunte al anestesiólogo a cargo.</li>
+  <li><strong>Resuelva el taller</strong> (pestaña «Taller»). Es 100% autocalificable: cada módulo se corrige con el botón «Corregir módulo» y la nota se calcula sobre 5.0.</li>
+  <li><strong>Descargue el PDF</strong> con su nombre y universidad. El archivo lleva marca de agua, código único y la nota obtenida.</li>
+  <li><strong>Súbalo a Google Classroom</strong> a más tardar el <strong>domingo 23:59 h</strong> de esa semana, incluida la última: aunque la rotación termine un jueves o viernes, el plazo es el domingo de esa semana.</li>
+</ol>
+<div class="callout t"><div class="callout-t">⏱ Trabajo independiente</div><p>Cada semana requiere, además de la jornada asistencial de lunes a viernes de 7:00 a 16:00, entre <strong>2 y 6 horas</strong> de trabajo independiente (lectura de la teoría y desarrollo del taller), según el tema. Equivale a <strong>cerca de 1 hora diaria</strong>: repártalas durante la semana en lugar de dejarlas para el domingo. Los tiempos de cada semana son <strong>estimados para un estudiante promedio</strong> y pueden variar según su ritmo.</p></div>
+<div class="callout"><div class="callout-t">Reglas del taller</div><p>Use <strong>punto</strong> como separador decimal. En los cálculos se califica <strong>cada casilla del procedimiento</strong>, no solo el resultado. En la selección múltiple, las marcas incorrectas descuentan. El taller es <strong>individual</strong>: el código único y la marca de agua permiten verificar la autoría.</p></div>
+
+<h2><span class="num">05</span>Evaluación</h2>
+<div class="grid2">
+  <div class="card"><div class="card-t">Talleres semanales · 30%</div><p>Un taller por semana de rotación, cada uno calificado automáticamente de 0.0 a 5.0. El número de talleres depende de la duración de la rotación (sección 03).</p></div>
+  <div class="card"><div class="card-t">Exámenes · 70%</div><p><strong>2–3 semanas:</strong> examen final 70%.<br><strong>4 semanas:</strong> parcial 30% (fin de la semana 2) + examen final 40%.<br><strong>5–6 semanas:</strong> parcial 30% (fin de la semana 3) + examen final 40%.<br>Cada examen evalúa <strong>solo las semanas rotadas</strong> e incluye un <strong>caso práctico</strong> (dosis en mg y mL, TOT, ventilador).</p></div>
+</div>
+<div class="grid2" style="margin-top:14px">
+  <div class="card"><div class="card-t">Componente práctico y conductual</div><p>Se evalúa con el Formato de Calificación Diaria, firmado cada día por el anestesiólogo de la sala asignada.</p></div>
+  <div class="card"><div class="card-t">Exposición semanal</div><p>Obligatoria y <strong>sin nota</strong>. Una universidad expone cada semana un tema, de forma virtual, durante 1 hora.</p></div>
+</div>
+<div class="callout t"><div class="callout-t">Recomendación</div><p>Si su rotación es corta, no se limite a sus talleres: las guías de las semanas siguientes están disponibles para consulta y le servirán en la práctica clínica.</p></div>
+
+</div>
+<footer>
+  <div><b>Dr. Andrés Robayo C.</b><br>Médico Anestesiólogo · Coordinador académico de la rotación de pregrado<br>Hospital de Kennedy · Hospital de Bosa · Subred Integrada de Servicios de Salud Sur Occidente</div>
+  <div style="text-align:right">© Dr. Andrés Robayo C.<br>Material de uso académico</div>
+</footer>
+</div>
+
+<script>
+/* ═══ CONFIGURACIÓN DE LAS SEMANAS ═══ */
+var WEEKS = [
+  { n:1, color:'#0f2744', title:'Vía Aérea, Oxigenación y Ventilador',
+    hrs:[1,2,2.5,3,4,5], tag:'DAS 2025 · Ventilación protectora', mods:11, pts:'Nota sobre 5.0',
+    obj:['Explicar la fisiología del oxígeno y elegir el sistema de oxigenoterapia según la FiO₂ requerida.',
+         'Evaluar la vía aérea con predictores de ventilación e intubación difíciles (DAS 2025).',
+         'Realizar preoxigenación eficaz y conocer la oxigenación apneica.',
+         'Seleccionar hoja de laringoscopio, TOT (incluido el cálculo pediátrico) y máscara laríngea.',
+         'Aplicar los planes DAS 2025 y la ISR en el paciente con estómago lleno.',
+         'Programar el ventilador con estrategia protectora y corregir problemas frecuentes.'],
+    topics:['Fisiología respiratoria','Oxigenoterapia','Evaluación de la vía aérea','Preoxigenación','Máscara facial','Laringoscopia e IOT','TOT y LMA','Estómago lleno e ISR','Planes DAS 2025','Ventilación protectora'] },
+  { n:2, color:'#0d7a6e', title:'Farmacología Anestésica 1',
+    hrs:[1.5,2,3,4,5,6], tag:'Hipnóticos · Opioides · BNM', mods:13, pts:'Nota sobre 5.0',
+    obj:['Convertir unidades con análisis dimensional y calcular dosis y volúmenes sin errores.',
+         'Explicar los receptores GABA-A, NMDA, opioides y nicotínico, y su relación con el efecto clínico.',
+         'Elegir el hipnótico de inducción según el paciente (propofol, ketamina, etomidato, tiopental).',
+         'Dosificar opioides, reconocer el toxidrome y tratarlo con naloxona.',
+         'Usar succinilcolina y BNM no despolarizantes, interpretar el TOF y revertir el bloqueo.',
+         'Calcular infusiones y planear una secuencia rápida de intubación completa.'],
+    topics:['Análisis dimensional','GABA-A y NMDA','Propofol','Ketamina','Etomidato','Tiopental','Opioides y naloxona','Unión neuromuscular','Succinilcolina','Rocuronio, vecuronio, cisatracurio','TOF y reversión','Infusiones','ISR'] },
+  { n:3, color:'#C62828', title:'Dolor Perioperatorio y Anestésicos Locales',
+    hrs:[1.5,2,3,4,4.5,6], tag:'ASRA LAST · Analgesia multimodal', mods:9, pts:'Nota sobre 5.0',
+    obj:['Explicar la fisiopatología del dolor agudo y evaluarlo con escalas validadas.',
+         'Relacionar pKa, liposolubilidad y unión a proteínas con el inicio, la potencia y la duración de los anestésicos locales.',
+         'Calcular la dosis máxima, la concentración y el volumen de un anestésico local.',
+         'Reconocer la toxicidad sistémica (LAST) y aplicar el protocolo de emulsión lipídica.',
+         'Diseñar analgesia multimodal con opioides, AINE, paracetamol y coadyuvantes.',
+         'Manejar el dolor en la UCPA y en situaciones especiales (tolerancia, hiperalgesia).'],
+    topics:['Fisiopatología del dolor','Escalas','Analgesia multimodal','Fisicoquímica de los AL','Fibras y bloqueo diferencial','Canales de sodio','Ésteres y amidas','LAST e Intralipid','Dosis máxima y diluciones','Lidocaína IV, ketamina, dexmedetomidina','Gabapentinoides, dexametasona, magnesio','Dolor en la UCPA'] },
+  { n:4, color:'#6A1B9A', title:'Farmacología Anestésica 2',
+    hrs:[1,1.5,2.5,3.5,4,5], tag:'Sedantes · Inhalados', mods:11, pts:'Nota sobre 5.0',
+    obj:['Explicar el mecanismo de las benzodiacepinas en el sitio α–γ2 del receptor GABA-A.',
+         'Dosificar midazolam, lorazepam oral y diazepam según la indicación y el paciente.',
+         'Revertir con flumazenil y anticipar la re-sedación.',
+         'Usar la dexmedetomidina (carga, infusión) y elegir entre ella y el midazolam según el paciente.',
+         'Explicar la captación de los anestésicos inhalados y el concepto de CAM (incluida la altitud).',
+         'Comparar sevoflurano, desflurano, isoflurano y óxido nitroso y calcular el consumo de vapor.',
+         'Reconocer y tratar la hipertermia maligna con dantroleno.'],
+    topics:['Sitio benzodiacepínico','Midazolam','Lorazepam oral','Diazepam','Flumazenil','Dexmedetomidina','Seguridad en el anciano','Coeficientes de partición','Captación y FA/FI','CAM','Sevoflurano, desflurano, isoflurano','Óxido nitroso','Hipertermia maligna','Consumo de vapor'] },
+  { n:5, color:'#E65100', title:'Fluidoterapia Perioperatoria y NVPO',
+    hrs:[1.5,2,2,2.5,3.5,4.5], tag:'GDT · 5.º consenso NVPO 2025', mods:11, pts:'Nota sobre 5.0',
+    obj:['Explicar los compartimentos hídricos y el principio de Starling revisado (glicocálix).',
+         'Elegir entre cristaloides y coloides según la evidencia actual.',
+         'Calcular requerimientos, déficit, pérdidas y necesidad de transfusión.',
+         'Aplicar estrategias restrictiva, liberal y guiada por metas, y evaluar la respuesta al volumen.',
+         'Estimar el riesgo de NVPO (Apfel) y planear profilaxis y rescate.',
+         'Calcular dosis de antieméticos e integrar fluidos, hemodinamia y NVPO en casos clínicos.'],
+    topics:['Compartimentos hídricos','Starling y glicocálix','Cristaloides','Coloides','Requerimientos y déficit','Pérdidas y transfusión','Liberal vs. restrictiva vs. GDT','Respuesta al volumen','Shock','Reflejo emético','Apfel','Profilaxis y rescate','Antieméticos'] },
+  { n:6, color:'#2E7D32', title:'Valoración Preanestésica',
+    hrs:[0.5,1,1,1.5,2,2], tag:'AHA/ACC 2024 · ESC 2022', mods:8, pts:'Nota sobre 5.0',
+    obj:['Clasificar al paciente con la escala ASA (incluido el sufijo E).',
+         'Calcular el RCRI y estimar la capacidad funcional con METs y DASI.',
+         'Aplicar el algoritmo de riesgo cardiovascular y saber cuándo pedir biomarcadores.',
+         'Identificar otros riesgos (apnea del sueño, fragilidad, pulmonar, anemia) y pedir solo los exámenes necesarios.',
+         'Indicar el ayuno correcto, incluidos niños y pacientes con agonistas GLP-1.',
+         'Decidir qué medicamentos continuar o suspender antes de la cirugía (antitrombóticos, antidiabéticos, cardiovasculares, psiquiátricos).'],
+    topics:['ASA','RCRI','METs y DASI','Algoritmo cardiovascular','NT-proBNP y troponina','STOP-Bang','Fragilidad','Anemia','Exámenes preoperatorios','Ayuno','Antitrombóticos','Antidiabéticos','Continuar o suspender'] }
+];
+
+var dur = 6;
+function fmt(x){return String(x).replace('.',',');}
+function rng(a,b){return a===b?fmt(a)+' h':fmt(a)+'–'+fmt(b)+' h';}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+function renderWeeks(){
+  var h='';
+  WEEKS.forEach(function(w){
+    var off = w.n>dur;
+    h+='<div class="week'+(off?' off':'')+'" style="--c:'+w.color+'">'
+      +'<div class="week-h"><div class="wk"><small>SEMANA</small>'+w.n+'</div><div class="wt">'+esc(w.title)+'</div><span class="wtag">'+esc(w.tag)+'</span></div>'
+      +'<div class="week-b"><div><h4>Al terminar la semana, el estudiante será capaz de:</h4><ul>'
+      +w.obj.map(function(o){return '<li>'+esc(o)+'</li>';}).join('')+'</ul></div>'
+      +'<div><h4>Contenidos</h4><div class="chips">'+w.topics.map(function(t){return '<span class="chip">'+esc(t)+'</span>';}).join('')+'</div>'
+      +'<div class="facts"><div class="fact"><div class="k">Taller</div><div class="v">'+w.mods+' módulos</div></div><div class="fact"><div class="k">Calificación</div><div class="v">'+esc(w.pts)+'</div></div>'
+      +'<div class="fact" style="grid-column:1/-1"><div class="k">⏱ Trabajo independiente estimado</div><div class="v">'+rng(w.hrs[4],w.hrs[5])+' por semana</div><div style="font-size:9pt;font-weight:600">Teoría '+rng(w.hrs[0],w.hrs[1])+' · Taller '+rng(w.hrs[2],w.hrs[3])+'</div></div></div>'
+      +(off?'<div style="margin-top:8px;font-size:9pt;font-weight:700;color:'+w.color+'">No es taller obligatorio en una rotación de '+dur+' semanas</div>':'')
+      +'</div></div></div>';
+  });
+  document.getElementById('weeks').innerHTML=h;
+}
+function EVAL(d){ return {p: d<=3 ? 0 : (d===4 ? 2 : 3)}; }
+function renderMatrix(){
+  var h='<thead><tr><th>Semana · Taller</th>';
+  for(var d=2;d<=6;d++) h+='<th'+(d===dur?' class="sel"':'')+'>'+d+' sem</th>';
+  h+='</tr></thead><tbody>';
+  WEEKS.forEach(function(w){
+    h+='<tr><td><strong>S'+w.n+'</strong> · '+esc(w.title)+'</td>';
+    for(var d=2;d<=6;d++) h+='<td'+(d===dur?' class="sel"':'')+'>'+(w.n<=d?'<span class="y">✔</span>':'<span class="n">—</span>')+'</td>';
+    h+='</tr>';
+  });
+  h+='<tr><td><strong>Total de talleres</strong></td>';
+  for(var d=2;d<=6;d++) h+='<td'+(d===dur?' class="sel"':'')+'><strong>'+d+'</strong></td>';
+  h+='</tr><tr><td><strong>📝 Parcial</strong></td>';
+  for(var d=2;d<=6;d++){ var e=EVAL(d); h+='<td'+(d===dur?' class="sel"':'')+'>'+(e.p?'<strong>Fin S'+e.p+'</strong><br><small>S1–S'+e.p+'</small>':'<span class="n">—</span>')+'</td>'; }
+  h+='</tr><tr><td><strong>📝 Examen final</strong></td>';
+  for(var d=2;d<=6;d++){ var e=EVAL(d); h+='<td'+(d===dur?' class="sel"':'')+'><strong>Último día</strong><br><small>S'+(e.p?e.p+1:1)+'–S'+d+(e.p?' + integración':'')+'</small></td>'; }
+  h+='</tr><tr><td><strong>Ponderación</strong><br><small>talleres / parcial / final</small></td>';
+  for(var d=2;d<=6;d++){ var e=EVAL(d); h+='<td'+(d===dur?' class="sel"':'')+'><strong>'+(e.p?'30 / 30 / 40':'30 / — / 70')+'</strong></td>'; }
+  document.getElementById('mx').innerHTML=h+'</tr></tbody>';
+}
+function renderPicker(){
+  var b='';
+  for(var d=2;d<=6;d++) b+='<button class="pbtn'+(d===dur?' on':'')+'" onclick="setDur('+d+')">'+d+' semanas</button>';
+  document.getElementById('pbtns').innerHTML=b;
+  var list=WEEKS.filter(function(w){return w.n<=dur;}).map(function(w){return 'S'+w.n+' '+w.title;}).join(' · ');
+  var e=EVAL(dur), lo=0, hi=0;
+  WEEKS.forEach(function(w){ if(w.n<=dur){ lo+=w.hrs[4]; hi+=w.hrs[5]; } });
+  document.getElementById('pmsg').innerHTML='Rotación de <b>'+dur+' semanas</b> → <b>'+dur+' talleres</b>: '+esc(list)+'.<br>Trabajo independiente estimado: <b>'+rng(lo,hi)+'</b> en total (≈ 1 h diaria).<br>Evaluación: '+(e.p?'<b>parcial</b> al final de la semana '+e.p+' (30%) + <b>examen final</b> (40%) + talleres (30%).':'<b>examen final</b> (70%) + talleres (30%).');
+}
+function setDur(d){
+  dur=d; try{localStorage.setItem('syllabus-dur',d);}catch(e){}
+  renderPicker(); renderWeeks(); renderMatrix();
+}
+(function(){
+  var q=parseInt((location.hash.match(/sem(?:anas)?=(\d)/)||[])[1],10), s=null;
+  try{s=parseInt(localStorage.getItem('syllabus-dur'),10);}catch(e){}
+  dur = (q>=2&&q<=6)?q:((s>=2&&s<=6)?s:6);
+  setDur(dur);
+})();
+</script>
+</body>
+</html>

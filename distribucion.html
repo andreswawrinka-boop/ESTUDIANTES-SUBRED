@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Rotación de Salas — Anestesiología — Kennedy + Bosa — Semana 1 (19/10/2026 → 25/10/2026)</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 :root{--k:#1F4BFF;--b:#FF1F4B;--ink:#0A0A2E;--y:#FFD400;--g:#00B248;--o:#FF6D00;--p:#8A2BE2;--c:#00A3D9;--pk:#FF2D87;--ln:rgba(10,10,46,.14);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{-webkit-text-size-adjust:100%;}
-body{font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.45;color:var(--ink);background:#fff;font-variant-numeric:tabular-nums;}
+body{font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:1.45;color:var(--ink);background:#fff;font-variant-numeric:tabular-nums;}
 b,strong{font-weight:800;}
 /* ── ENCABEZADO ── */
 .top{background:linear-gradient(100deg,#1F4BFF 0%,#8A2BE2 48%,#FF1F4B 100%);color:#fff;}
 .top-in{max-width:1500px;margin:0 auto;padding:14px 18px 10px;display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;}
 .top-l{flex:1 1 420px;}
 .top-tag{font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;}
-.top h1{font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(20px,3vw,30px);line-height:1.08;letter-spacing:.3px;margin:3px 0;}
+.top h1{font-family:'DM Sans',sans-serif;font-weight:900;font-size:clamp(20px,3vw,30px);line-height:1.08;letter-spacing:.3px;margin:3px 0;}
 .top-sub{font-size:13px;font-weight:700;}
 .top-r{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;}
 .pill{display:inline-flex;gap:5px;align-items:center;color:#fff;padding:4px 10px;border-radius:20px;font-size:11.5px;font-weight:700;border:2px solid #fff;}
@@ -27,7 +27,7 @@ b,strong{font-weight:800;}
 /* ── BLOQUES INFORMATIVOS ── */
 .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin-bottom:10px;}
 .ib{border:3px solid var(--c);border-radius:10px;overflow:hidden;background:#fff;}
-.ib-h{background:var(--c);color:#fff;font-family:'Outfit',sans-serif;font-weight:800;font-size:13.5px;letter-spacing:.4px;padding:5px 10px;}
+.ib-h{background:var(--c);color:#fff;font-family:'DM Sans',sans-serif;font-weight:800;font-size:13.5px;letter-spacing:.4px;padding:5px 10px;}
 .ib-b{padding:7px 10px;font-size:12px;}
 .tight{list-style:none;}
 .tight li{padding:2px 0;border-bottom:1px dashed var(--ln);}
@@ -44,25 +44,25 @@ b,strong{font-weight:800;}
 .nt b,.nt strong{color:var(--c);}
 /* ── LEYENDA ── */
 .ley{display:flex;flex-wrap:wrap;gap:5px;align-items:center;border:3px solid var(--ink);border-radius:10px;padding:7px 10px;margin-bottom:10px;}
-.ley-t{font-family:'Outfit',sans-serif;font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-right:4px;}
+.ley-t{font-family:'DM Sans',sans-serif;font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-right:4px;}
 .lb{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:800;color:#fff;white-space:nowrap;}
 /* ── SELECTORES ── */
 .week-picker{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 8px;padding:7px 10px;border:3px solid var(--ink);border-radius:10px;}
-.week-picker .wp-label{font-family:'Outfit',sans-serif;font-weight:900;font-size:13px;}
-.wp-btn{display:inline-flex;flex-direction:column;align-items:center;font-family:'Inter',sans-serif;font-weight:800;font-size:12px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer;line-height:1.15;}
+.week-picker .wp-label{font-family:'DM Sans',sans-serif;font-weight:900;font-size:13px;}
+.wp-btn{display:inline-flex;flex-direction:column;align-items:center;font-family:'DM Sans',sans-serif;font-weight:800;font-size:12px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer;line-height:1.15;}
 .wp-btn:hover{background:var(--y);}
 .wp-btn .wp-range{font-weight:700;font-size:10px;color:var(--p);}
 .wp-btn.active{background:var(--ink);color:var(--y);}
 .wp-btn.active .wp-range{color:#fff;}
 .hosp-tabs{display:flex;gap:8px;margin:0 0 10px;position:sticky;top:0;background:#fff;padding:6px 0;z-index:30;flex-wrap:wrap;}
-.hosp-tab{flex:1;min-width:160px;max-width:300px;padding:8px 16px;border:3px solid var(--ink);border-radius:10px;background:#fff;font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;letter-spacing:.6px;cursor:pointer;color:var(--ink);}
+.hosp-tab{flex:1;min-width:160px;max-width:300px;padding:8px 16px;border:3px solid var(--ink);border-radius:10px;background:#fff;font-family:'DM Sans',sans-serif;font-weight:900;font-size:16px;letter-spacing:.6px;cursor:pointer;color:var(--ink);}
 .hosp-tab[data-tab=kennedy].active{background:var(--k);color:#fff;border-color:var(--k);}
 .hosp-tab[data-tab=bosa].active{background:var(--b);color:#fff;border-color:var(--b);}
 /* ── SECCIONES ── */
 .seccion{border:3px solid var(--a);border-radius:12px;margin-bottom:14px;overflow:hidden;background:#fff;}
 .sec-h{background:var(--a);color:#fff;padding:7px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.sec-num{width:24px;height:24px;border-radius:6px;background:#fff;color:var(--a);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:14px;}
-.sec-titulo{font-family:'Outfit',sans-serif;font-weight:900;font-size:17px;letter-spacing:.6px;}
+.sec-num{width:24px;height:24px;border-radius:6px;background:#fff;color:var(--a);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-weight:900;font-size:14px;}
+.sec-titulo{font-family:'DM Sans',sans-serif;font-weight:900;font-size:17px;letter-spacing:.6px;}
 .sec-extra{background:#fff;color:var(--a);font-size:10.5px;font-weight:900;padding:2px 8px;border-radius:5px;}
 .sec-sub{margin-left:auto;font-size:11.5px;font-weight:800;color:#fff;}
 .sec-b{overflow-x:auto;}
@@ -73,9 +73,9 @@ b,strong{font-weight:800;}
 .wk-n{background:var(--y);color:var(--ink);font-weight:900;padding:1px 8px;border-radius:4px;margin-right:6px;}
 .subhead-row .sh{color:#fff;}
 .th-meta{background:var(--ink);text-align:left;padding:5px 8px;font-size:10.5px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;position:sticky;left:0;z-index:3;min-width:132px;}
-.day-h{text-align:center;padding:4px 3px;font-family:'Outfit',sans-serif;font-weight:900;font-size:14px;line-height:1.05;}
-.day-h .day-date{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:800;margin-top:1px;}
-.day-h .day-fest{display:inline-block;font-family:'Inter',sans-serif;font-size:8.5px;font-weight:900;background:#fff;color:#FF1744;border-radius:3px;padding:0 4px;margin-top:2px;}
+.day-h{text-align:center;padding:4px 3px;font-family:'DM Sans',sans-serif;font-weight:900;font-size:14px;line-height:1.05;}
+.day-h .day-date{display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:800;margin-top:1px;}
+.day-h .day-fest{display:inline-block;font-family:'DM Sans',sans-serif;font-size:8.5px;font-weight:900;background:#fff;color:#B00020;border-radius:3px;padding:0 4px;margin-top:2px;}
 .sala-lbl{font-weight:900;font-size:12px;color:#fff;padding:4px 8px;text-align:left;white-space:normal;line-height:1.2;position:sticky;left:0;z-index:2;}
 .sala-lbl .lbl-sub{display:block;font-size:8.5px;font-weight:700;white-space:normal;line-height:1.2;}
 .sala-row td,.urg-row td,.note-row td,.night-row td{border:1px solid var(--ln);vertical-align:middle;}
@@ -103,7 +103,7 @@ b,strong{font-weight:800;}
 .students-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:10px;padding:10px;}
 .student-card{border:3px solid var(--u);border-radius:10px;overflow:hidden;background:#fff;}
 .sc-h{background:var(--u);color:#fff;padding:6px 12px;display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;}
-.sc-name{font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;letter-spacing:.3px;}
+.sc-name{font-family:'DM Sans',sans-serif;font-weight:900;font-size:16px;letter-spacing:.3px;}
 .sc-meta{font-size:11px;font-weight:700;}
 .sc-stats{display:flex;flex-wrap:wrap;gap:4px;padding:6px 8px;border-bottom:2px solid var(--u);}
 .st{border:2px solid var(--c);color:var(--ink);border-radius:5px;padding:0 6px;font-size:10.5px;font-weight:700;}
@@ -138,10 +138,60 @@ b,strong{font-weight:800;}
   .week-body,[data-date]{display:table-row-group!important;}
   .seccion,.student-card,.ib{break-inside:avoid;}
 }
+.top{background:linear-gradient(110deg,#003B46 0%,#00707E 100%)!important;}
+.top-salas{background:#002A33!important;}
+.alert{background:#fff!important;color:#002A33!important;border:2px solid #B00020!important;border-left:10px solid #B00020!important;}
+.alert u,.alert b{color:#B00020!important;}
+.ib{--c:#00707E!important;border-width:2px!important;}
+.nt{--c:#00707E!important;}
+.foot{background:#003B46!important;}
+.foot b{color:#7FE3EE!important;}
+.foot .copy{color:#fff!important;}
+
+/* Nombres de estudiantes siempre en negro */
+.nm{color:#000!important;}
+.night-cell{background:#fff!important;color:#000!important;box-shadow:inset 0 0 0 3px #6A00F4;}
+.night-cell .nm{color:#000!important;}
+.night-cell .chip{background:#6A00F4!important;color:#fff!important;}
+.night-moon{color:#6A00F4!important;}
+.urg-name{background:#fff!important;color:#000!important;border:2px solid #FF1744;}
+.note-name{background:#fff!important;color:#000!important;border:2px solid #0B1736;}
+.sc-h{background:#fff!important;color:#000!important;border-bottom:4px solid var(--u);}
+.sc-name,.sc-meta{color:#000!important;}
 
 
 
 
+/* Fichas individuales compactas */
+.students-grid{grid-template-columns:repeat(auto-fill,minmax(400px,1fr))!important;gap:8px!important;padding:8px!important;}
+.student-card{border-width:2px!important;border-radius:8px!important;}
+.sc-h{padding:4px 10px!important;}
+.sc-name{font-size:14px!important;}
+.sc-meta{font-size:10px!important;}
+.sc-stats{padding:3px 6px!important;gap:3px!important;}
+.st{font-size:9.5px!important;padding:0 5px!important;}
+.sc-body{grid-template-columns:1fr 104px!important;}
+.sc-side{padding:4px 6px!important;}
+.sc-side-t{font-size:9px!important;margin-bottom:2px!important;}
+.ss-row{font-size:10px!important;padding:1px 0!important;}
+.ind-table{font-size:10px!important;}
+.ind-table thead th{padding:2px 5px!important;font-size:8.5px!important;}
+.ind-table td{padding:1px 5px!important;line-height:1.25;}
+.ind-fecha,.ind-dia{font-size:10px!important;}
+.badge-ind{font-size:9px!important;padding:0 5px!important;}
+.ind-table td{white-space:nowrap;}
+.r-note-td{font-size:8.5px!important;padding:0 5px 1px 14px!important;white-space:normal!important;}
+/* Tarjetas: color sólido de la universidad */
+.student-card{border:3px solid var(--u)!important;}
+.sc-h{background:var(--u)!important;border-bottom:none!important;padding:5px 10px!important;}
+.sc-name{background:#fff;color:#000!important;padding:1px 10px;border-radius:6px;}
+.sc-meta{color:#fff!important;font-weight:800!important;}
+.sc-stats{background:var(--u);border-bottom:none!important;}
+.st{background:#fff!important;border-color:#fff!important;}
+.sc-tbl{border-right:3px solid var(--u)!important;}
+.sc-side{background:#fff;}
+.sc-side-t{color:var(--u)!important;}
+.ind-table thead th{background:var(--u)!important;color:#fff!important;}
 
 
 
@@ -152,11 +202,11 @@ b,strong{font-weight:800;}
     <div class="top-l">
       <div class="top-tag">Kennedy + Bosa · Subred Integrada de Servicios de Salud Suroccidente · Bogotá D.C.</div>
       <h1>Rotación de Salas de Cirugía · Anestesiología</h1>
-      <div class="top-sub">Año 2026 · 19/10/2026 → 01/11/2026 · 7 estudiantes</div>
+      <div class="top-sub">Año 2026 · 19/10/2026 → 04/11/2026 · 10 estudiantes</div>
     </div>
-    <div class="top-r"><span class="pill" style="background:#F59E0B;"><b>UD</b> UDCA</span><span class="pill" style="background:#EF4444;"><b>RO</b> Rosario</span><span class="pill" style="background:#10B981;"><b>BO</b> El Bosque</span><span class="pill" style="background:#8B5CF6;"><b>AN</b> Ant. Nariño</span></div>
+    <div class="top-r"><span class="pill" style="background:#F59E0B;"><b>UD</b> UDCA</span><span class="pill" style="background:#EF4444;"><b>RO</b> Rosario</span><span class="pill" style="background:#10B981;"><b>BO</b> El Bosque</span><span class="pill" style="background:#8B5CF6;"><b>AN</b> Ant. Nariño</span><span class="pill" style="background:#7C3AED;"><b>SB</b> La Sabana</span></div>
   </div>
-  <div class="top-salas">Kennedy (Salas 1, 2, 3, 5 + Sala 4 comodín + IC) · Bosa (5 salas + Gastro/Recup + RM + IC) · sobrecupo Kennedy→Tintal/Bosa · 7 estudiantes</div>
+  <div class="top-salas">Kennedy (Salas 1, 2, 3, 5 + Sala 4 comodín + IC) · Bosa (5 salas + Gastro/Recup + RM + IC) · sobrecupo Kennedy→Tintal/Bosa</div>
 </header>
 
 <div class="cont"><div class="nota" style="background:#0A0A2E;color:#FFD400;border:0;border-left:8px solid #FF1F4B;font-weight:900;font-size:14px;">📅 Semana 1 — 19/10/2026 → 25/10/2026</div>
@@ -173,9 +223,9 @@ b,strong{font-weight:800;}
   </ul></div></div>
   <div class="ib" style="--c:#1F4BFF;"><div class="ib-h">⏰ Horarios de rotación y turnos</div><div class="ib-b"><table class="ht">
     <tbody><tr><td><b>Rotación entre semana</b></td><td class="hr">07:00–16:00</td><td>Lun–vie. Almuerzo 12–14 h según el anestesiólogo</td></tr>
-    <tr><td><b>Turno entre semana</b></td><td class="hr">07 · 13 · 19 h</td><td>Sala 07–13 · Pre-turno 13–19 · Noche 19–07 · <b>noche solo base Kennedy, en Kennedy</b></td></tr>
-    <tr><td><b>Turno fin de semana / festivo</b></td><td class="hr">19:00–07:00</td><td>Solo nocturno · <b>noche solo base Kennedy, en Kennedy</b></td></tr>
-    <tr><td><b>Urgencias Sala de Cirugía</b></td><td class="hr">07:00–17:00</td><td><b>OBLIGATORIO 1 por estudiante</b> · Kennedy: sáb, dom o festivo · Bosa: sáb o dom</td></tr>
+    <tr><td><b>Turno entre semana</b></td><td class="hr">07 · 13 · 19 h</td><td>Sala 07–13 · Pre-turno 13–19 · Noche 19–07 · <b>noche solo base Kennedy</b></td></tr>
+    <tr><td><b>Turno fin de semana / festivo</b></td><td class="hr">19:00–07:00</td><td>Solo nocturno</td></tr>
+    <tr><td><b>Urgencias Sala de Cirugía</b></td><td class="hr">07:00–17:00</td><td><b>OBLIGATORIO 1 por estudiante</b> · sábado o domingo, de día (Kennedy en Kennedy · Bosa en Bosa)</td></tr>
     <tr><td><b>Post-turno</b></td><td class="hr">07:00 → libre</td><td>Firma presencia a las 7:00 y queda libre; sin sala</td></tr>
   </tbody></table></div></div>
   <div class="ib" style="--c:#00A3D9;"><div class="ib-h">🧼 Lavado de manos OMS · 40–60 s</div><div class="ib-b"><ol class="steps">
@@ -197,31 +247,21 @@ b,strong{font-weight:800;}
 
 <div class="notes">
   
-  <div class="nt" style="--c:#FF1744;"><strong>🚨 Urgencias Sala de Cirugía:</strong> <b>1 turno OBLIGATORIO por estudiante</b>. Base Kennedy: sábado, domingo o festivo en Kennedy. Base Bosa: sábado o domingo en Bosa. Los estudiantes <b>base Bosa NO hacen turno de noche</b>.</div>
 </div>
 
-<div class="ley">
-  <span class="ley-t">Leyenda</span>
-  <span class="lb" style="background:#F59E0B;">UD · UDCA</span><span class="lb" style="background:#EF4444;">RO · Rosario</span><span class="lb" style="background:#10B981;">BO · El Bosque</span><span class="lb" style="background:#8B5CF6;">AN · Ant. Nariño</span>
-  <span class="lb" style="background:#312E81;">🌙 Turno Noche</span><span class="lb" style="background:#4A1D96;">😴 Post-turno</span><span class="lb" style="background:#14532D;">📋 Interconsultas</span><span class="lb" style="background:#C2410C;">🩺 Consulta Externa</span><span class="lb" style="background:#0C4A6E;">🔄 Gastro AM / Recup PM</span><span class="lb" style="background:#7C2D12;">🧲 Resonancia Magnética</span><span class="lb" style="background:#0F766E;">🏨 Hospital Tintal</span><span class="lb" style="background:#7F1D1D;">🚨 Urgencias Sala de Cirugía</span><span class="lb" style="background:#0050FF;">🏖️ Día Libre</span><span class="lb" style="background:#9A3412;">📝 Examen Final</span><span class="lb" style="background:#C62828;">↪️ Cambio a Bosa (hoy)</span><span class="lb" style="background:#0D47A1;">↩️ Cambio a Kennedy (hoy)</span>
-  <span class="lb" style="background:#E6A800;">📚 Clase</span>
-  <span class="lb" style="background:#FF1744;">🇨🇴 Festivo</span>
-  <span class="lb" style="background:#7A00FF;">🃏 Comodín (Kennedy Sala 4 · Bosa Sala 6, no viernes)</span>
-  <span class="lb" style="background:#FF6D00;">⚠️ Sala compartida</span>
-</div>
 
 
       <div class="hosp-tabs">
-        <button class="hosp-tab active" data-tab="kennedy" onclick="showHospTab('kennedy',this)">🔵 Kennedy · 2</button>
+        <button class="hosp-tab active" data-tab="kennedy" onclick="showHospTab('kennedy',this)">🔵 Kennedy · 5</button>
         <button class="hosp-tab" data-tab="bosa" onclick="showHospTab('bosa',this)">🔴 Bosa · 5</button>
       </div>
-      <div class="hosp-panel" id="panel-kennedy" style=""><section class="seccion" style="--a:#1F4BFF;">
-    <div class="sec-h"><span class="sec-num">1</span><span class="sec-titulo">🔵 HOSPITAL DE KENNEDY</span><span class="sec-sub">19/10/2026 → 01/11/2026</span></div>
+      <div class="hosp-panel" id="panel-kennedy"><section class="seccion" style="--a:#1F4BFF;">
+    <div class="sec-h"><span class="sec-num">1</span><span class="sec-titulo">🔵 HOSPITAL DE KENNEDY</span><span class="sec-sub">19/10/2026 → 04/11/2026</span></div>
     <div class="sec-b"><table class="cal-table transpose"><colgroup><col style="width:150px;"></colgroup><tbody class="week-body" data-week="0">
       <tr class="week-title-row"><td colspan="8" class="week-title"><span class="wk-n">SEMANA 1</span> 19/10/2026 → 25/10/2026</td></tr>
-      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h" style="background:#1F4BFF;">Lunes<span class="day-date">19/10</span></th><th class="sh day-h" style="background:#00A3D9;">Martes<span class="day-date">20/10</span></th><th class="sh day-h" style="background:#FF6D00;">Miércoles<span class="day-date">21/10</span></th><th class="sh day-h" style="background:#8A2BE2;">Jueves<span class="day-date">22/10</span></th><th class="sh day-h" style="background:#00B248;">Viernes<span class="day-date">23/10</span></th><th class="sh day-h" style="background:#FF2D87;">Sábado<span class="day-date">24/10</span></th><th class="sh day-h" style="background:#FF1744;">Domingo<span class="day-date">25/10</span></th></tr><tr class="sala-row"><td class="sala-lbl" style="background:#1F4BFF;">Sala 1</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#006E5A;">Piedad Carolina Pavajeau</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF6D00;">Sala 2</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#B34700;">José Ignacio Penso </span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#006E5A;">Piedad Carolina Pavajeau</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Sala 3</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#006E5A;">Piedad Carolina Pavajeau</span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s3" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="s3" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#006E5A;">Piedad Carolina Pavajeau</span></div></td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm" style="color:#B34700;">José Ignacio Penso </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#7A00FF;">Sala 4 (Comodín)</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF2D87;">Sala 5</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="grid-cell night-cell"><span class="chip" style="background:#fff;color:#6A00F4;" title="El Bosque">BO</span><span class="nm">José Ignacio Penso </span><span class="night-moon">🌙 TURNO NOCHE</span></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 CAPS 29 · Carrera 78 # 35-71 sur</span></td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00968A;">Hospital Tintal</td><td class="cell-empty">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="night-row"><td class="sala-lbl" style="background:#6A00F4;">🌙 Turno Noche</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-wknd">—</td><td class="grid-cell night-cell"><div class="gc-in"><span class="chip" style="background:#fff;color:#6A00F4;">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div><span class="night-moon">🌙 19:00–07:00</span></td></tr><tr class="urg-row"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-urg"><span class="urg-name">José Ignacio Penso </span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#B000FF;">😴 Post-turno</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#B000FF;">José Ignacio Penso </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#E6A800;">José Ignacio Penso </span><span class="note-name" style="background:#E6A800;">Piedad Carolina Pavajeau</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#0050FF;">José Ignacio Penso </span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr></tbody></table></div>
+      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h" style="background:#00707E;">Lunes<span class="day-date">19/10</span></th><th class="sh day-h" style="background:#00707E;">Martes<span class="day-date">20/10</span></th><th class="sh day-h" style="background:#00707E;">Miércoles<span class="day-date">21/10</span></th><th class="sh day-h" style="background:#00707E;">Jueves<span class="day-date">22/10</span></th><th class="sh day-h" style="background:#00707E;">Viernes<span class="day-date">23/10</span></th><th class="sh day-h" style="background:#B00020;">Sábado<span class="day-date">24/10</span></th><th class="sh day-h" style="background:#B00020;">Domingo<span class="day-date">25/10</span></th></tr><tr class="sala-row"><td class="sala-lbl" style="background:#1F4BFF;">Sala 1</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Nicolas Andres Sanchez</span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Cary Mashá Tilano</span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Paulina Giraldo </span></div></td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF6D00;">Sala 2</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">José Ignacio Penso </span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Nicolas Andres Sanchez</span></div></td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Cary Mashá Tilano</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Sala 3</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s3" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Nicolas Andres Sanchez</span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div></td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#10B981;" title="El Bosque">BO</span><span class="nm">José Ignacio Penso </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#7A00FF;">Sala 4 (Comodín)</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="comodin" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Paulina Giraldo </span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="comodin" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Cary Mashá Tilano</span></div></td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF2D87;">Sala 5</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s4" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Paulina Giraldo </span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="grid-cell night-cell"><span class="chip" style="background:#fff;color:#6A00F4;" title="El Bosque">BO</span><span class="nm">José Ignacio Penso </span><span class="night-moon">🌙 TURNO NOCHE</span></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s4" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Nicolas Andres Sanchez</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="interconsult" data-preview-hosp="kennedy"><div><span class="chip" style="background:#7C3AED;" title="La Sabana">SB</span><span class="nm">Cary Mashá Tilano</span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="grid-cell night-cell"><span class="chip" style="background:#fff;color:#6A00F4;" title="La Sabana">SB</span><span class="nm">Paulina Giraldo </span><span class="night-moon">🌙 TURNO NOCHE</span></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 CAPS 29 · Carrera 78 # 35-71 sur</span></td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00968A;">Hospital Tintal</td><td class="cell-empty">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="night-row"><td class="sala-lbl" style="background:#6A00F4;">🌙 Turno Noche</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="grid-cell night-cell"><div class="gc-in"><span class="chip" style="background:#fff;color:#6A00F4;">SB</span><span class="nm">Cary Mashá Tilano</span></div><span class="night-moon">🌙 19:00–07:00</span></td><td class="grid-cell night-cell"><div class="gc-in"><span class="chip" style="background:#fff;color:#6A00F4;">BO</span><span class="nm">Piedad Carolina Pavajeau</span></div><span class="night-moon">🌙 19:00–07:00</span></td></tr><tr class="urg-row"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-name">Nicolas Andres Sanchez</span></td><td class="cell-urg"><span class="urg-name">José Ignacio Penso </span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#B000FF;">😴 Post-turno</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#B000FF;">José Ignacio Penso </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#B000FF;">Paulina Giraldo </span></td><td class="note-cell"><span class="note-name" style="border-color:#B000FF;">Cary Mashá Tilano</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#E6A800;">José Ignacio Penso </span><span class="note-name" style="border-color:#E6A800;">Piedad Carolina Pavajeau</span><span class="note-name" style="border-color:#E6A800;">Paulina Giraldo </span><span class="note-name" style="border-color:#E6A800;">Nicolas Andres Sanchez</span><span class="note-name" style="border-color:#E6A800;">Cary Mashá Tilano</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">José Ignacio Penso </span><span class="note-name" style="border-color:#0050FF;">Piedad Carolina Pavajeau</span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Paulina Giraldo </span><span class="note-name" style="border-color:#0050FF;">Nicolas Andres Sanchez</span></td></tr></tbody></table></div>
   </section><section class="seccion" style="--a:#1F4BFF;">
-    <div class="sec-h"><span class="sec-num">2</span><span class="sec-titulo">🔵 Rotación Individual — Kennedy</span><span class="sec-sub">2 estudiantes</span></div>
+    <div class="sec-h"><span class="sec-num">2</span><span class="sec-titulo">🔵 Rotación Individual — Kennedy</span><span class="sec-sub">5 estudiantes</span></div>
     <div class="students-grid"><div class="student-card" style="--u:#10B981;">
       <div class="sc-h"><span class="sc-name">José Ignacio Penso </span><span class="sc-meta">El Bosque · 19/10/2026 → 01/11/2026</span></div>
       <div class="sc-stats">
@@ -236,44 +276,38 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Interconsultas</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr><tr data-date="2026-10-21" class="r-night">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#6A00F4;color:#fff;">🌙 Turno Noche</span></td>
-        <td><span style="font-weight:700;color:#FF2D87;">Sala 5</span></td>
+        <td><span class="badge-ind" style="background:#6A00F4;color:#fff;">🌙 Turno Noche</span> <span style="font-weight:800;color:#000;">Sala 5</span></td>
       </tr><tr data-date="2026-10-21" class="r-note">
-          <td colspan="4" class="r-note-td">
+          <td colspan="3" class="r-note-td">
             &nbsp;&nbsp;7:00–13:00 sala · 13:00–19:00 preturno · 19:00–7:00 turno noche
           </td></tr><tr data-date="2026-10-22" class="r-post">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
-        <td><span class="badge-ind" style="background:#B000FF;color:#fff;">😴 Post-turno (sin sala)</span></td>
-        <td><span style="color:#6A00F4;font-size:10px;">Ausente — turno anterior</span></td>
+        <td><span class="badge-ind" style="background:#B000FF;color:#fff;">😴 Post-turno</span></td>
       </tr><tr data-date="2026-10-22" class="r-note">
-          <td colspan="4" class="r-note-td">
+          <td colspan="3" class="r-note-td">
             &nbsp;&nbsp;Libre todo el día — turno noche previo finalizado a las 7:00
           </td></tr><tr data-date="2026-10-23">
         <td class="ind-fecha">23/10/2026</td>
         <td class="ind-dia">Vie</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-25"><td class="ind-fecha">25/10/2026</td><td class="ind-dia">Dom</td>
-            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td>
-            <td style="font-family:monospace;font-size:10px;">—</td></tr></tbody>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
           </table>
         </div>
-        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>2d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>1d</b></div></div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>2d</b></div></div>
       </div>
     </div><div class="student-card" style="--u:#10B981;">
       <div class="sc-h"><span class="sc-name">Piedad Carolina Pavajeau</span><span class="sc-meta">El Bosque · 19/10/2026 → 01/11/2026</span></div>
@@ -282,51 +316,170 @@ b,strong{font-weight:800;}
         
         
         <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
-        <span class="st" style="--c:#0050FF">🏖️ <b>1</b> libre</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
         <span class="st" style="--c:#E6A800">📚 Clase: <b>Mar</b></span>
         <span class="st" style="--c:#FF6D00">📝 Examen: <b>29/10/2026</b></span>
       </div>
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF2D87;">Sala 5</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF6D00;">Sala 2</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-23">
         <td class="ind-fecha">23/10/2026</td>
         <td class="ind-dia">Vie</td>
-        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#1F4BFF;">Sala 1</span></td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
       </tr></tbody>
           </table>
         </div>
-        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>2d</b></div></div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>3d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" style="--u:#7C3AED;">
+      <div class="sc-h"><span class="sc-name">Paulina Giraldo </span><span class="sc-meta">La Sabana · 19/10/2026 → 04/11/2026</span></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>9</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>3</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Mar</b></span>
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>04/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-10-19">
+        <td class="ind-fecha">19/10/2026</td>
+        <td class="ind-dia">Lun</td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
+      </tr><tr data-date="2026-10-20">
+        <td class="ind-fecha">20/10/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-10-21">
+        <td class="ind-fecha">21/10/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#7A00FF;color:#fff;">🃏 Sala Comodín</span> <span style="font-weight:800;color:#000;">Sala 4 (Comodín)</span></td>
+      </tr><tr data-date="2026-10-22">
+        <td class="ind-fecha">22/10/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-10-23" class="r-night">
+        <td class="ind-fecha">23/10/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#6A00F4;color:#fff;">🌙 Turno Noche</span> <span style="font-weight:800;color:#000;">Interconsultas</span></td>
+      </tr><tr data-date="2026-10-23" class="r-note">
+          <td colspan="3" class="r-note-td">
+            &nbsp;&nbsp;7:00–13:00 sala · 13:00–19:00 preturno · 19:00–7:00 turno noche
+          </td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>3d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4 (Comodín)</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>2d</b></div></div>
+      </div>
+    </div><div class="student-card" style="--u:#7C3AED;">
+      <div class="sc-h"><span class="sc-name">Nicolas Andres Sanchez</span><span class="sc-meta">La Sabana · 19/10/2026 → 04/11/2026</span></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>9</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Mar</b></span>
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>04/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-10-19">
+        <td class="ind-fecha">19/10/2026</td>
+        <td class="ind-dia">Lun</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-10-20">
+        <td class="ind-fecha">20/10/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-10-21">
+        <td class="ind-fecha">21/10/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr><tr data-date="2026-10-22">
+        <td class="ind-fecha">22/10/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr><tr data-date="2026-10-23">
+        <td class="ind-fecha">23/10/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
+      </tr><tr data-date="2026-10-24"><td class="ind-fecha">24/10/2026</td><td class="ind-dia">Sáb</td>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>2d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>2d</b></div></div>
+      </div>
+    </div><div class="student-card" style="--u:#7C3AED;">
+      <div class="sc-h"><span class="sc-name">Cary Mashá Tilano</span><span class="sc-meta">La Sabana · 19/10/2026 → 04/11/2026</span></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>9</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Mar</b></span>
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>04/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-10-19">
+        <td class="ind-fecha">19/10/2026</td>
+        <td class="ind-dia">Lun</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-10-20">
+        <td class="ind-fecha">20/10/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-10-21">
+        <td class="ind-fecha">21/10/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-10-22">
+        <td class="ind-fecha">22/10/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#7A00FF;color:#fff;">🃏 Sala Comodín</span> <span style="font-weight:800;color:#000;">Sala 4 (Comodín)</span></td>
+      </tr><tr data-date="2026-10-23">
+        <td class="ind-fecha">23/10/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>2d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4 (Comodín)</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>2d</b></div></div>
       </div>
     </div></div>
   </section></div>
-      <div class="hosp-panel" id="panel-bosa" style="display: none;"><section class="seccion" style="--a:#FF1F4B;">
-    <div class="sec-h"><span class="sec-num">1</span><span class="sec-titulo">🔴 HOSPITAL DE BOSA</span><span class="sec-extra">incluye apoyo de Kennedy</span><span class="sec-sub">19/10/2026 → 01/11/2026</span></div>
+      <div class="hosp-panel" id="panel-bosa" style="display:none;"><section class="seccion" style="--a:#FF1F4B;">
+    <div class="sec-h"><span class="sec-num">1</span><span class="sec-titulo">🔴 HOSPITAL DE BOSA</span><span class="sec-extra">incluye apoyo de Kennedy</span><span class="sec-sub">19/10/2026 → 04/11/2026</span></div>
     <div class="sec-b"><table class="cal-table transpose"><colgroup><col style="width:150px;"></colgroup><tbody class="week-body" data-week="0">
       <tr class="week-title-row"><td colspan="8" class="week-title"><span class="wk-n">SEMANA 1</span> 19/10/2026 → 25/10/2026</td></tr>
-      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h" style="background:#1F4BFF;">Lunes<span class="day-date">19/10</span></th><th class="sh day-h" style="background:#00A3D9;">Martes<span class="day-date">20/10</span></th><th class="sh day-h" style="background:#FF6D00;">Miércoles<span class="day-date">21/10</span></th><th class="sh day-h" style="background:#8A2BE2;">Jueves<span class="day-date">22/10</span></th><th class="sh day-h" style="background:#00B248;">Viernes<span class="day-date">23/10</span></th><th class="sh day-h" style="background:#FF2D87;">Sábado<span class="day-date">24/10</span></th><th class="sh day-h" style="background:#FF1744;">Domingo<span class="day-date">25/10</span></th></tr><tr class="sala-row"><td class="sala-lbl" style="background:#1F4BFF;">Sala 1</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#C2006B;">Yurlith Cristina Vera</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#6A00C8;">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#C40018;">Liliana Ivanny Bermudez</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s1" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm" style="color:#0033CC;">Nohemi Eleonora Barrera</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF6D00;">Sala 2</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm" style="color:#0033CC;">Nohemi Eleonora Barrera</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#0A0A2E;">María Fernanda Perez </span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#C2006B;">Yurlith Cristina Vera</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s2" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#6A00C8;">Daniela Sánchez Gómez </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Sala 3</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#6A00C8;">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#C40018;">Liliana Ivanny Bermudez</span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm" style="color:#0033CC;">Nohemi Eleonora Barrera</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s3" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#C40018;">Liliana Ivanny Bermudez</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF2D87;">Sala 4</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#C40018;">Liliana Ivanny Bermudez</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#C2006B;">Yurlith Cristina Vera</span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm" style="color:#6A00C8;">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm" style="color:#0033CC;">Nohemi Eleonora Barrera</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s4" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#8A2BE2;">Sala 5</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s5" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#0A0A2E;">María Fernanda Perez </span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#0091EA;">Gastro AM / Recup PM</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="recup" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm" style="color:#0A0A2E;">María Fernanda Perez </span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#D97A00;">Resonancia Magnética</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="resonancia" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm" style="color:#0033CC;">Nohemi Eleonora Barrera</span></div></td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 CAPS 29 · Carrera 78 # 35-71 sur</span></td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#7A00FF;">Sala 6 (Comodín)</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-na">No los viernes</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="urg-row"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-urg"><span class="urg-name">Daniela Sánchez Gómez </span><span class="urg-name">Liliana Ivanny Bermudez</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#FF6D00;">📝 Examen Final</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#FF6D00;">María Fernanda Perez </span><span class="note-name" style="background:#FF6D00;">Yurlith Cristina Vera</span></td><td class="note-cell"><span class="note-name" style="background:#FF6D00;">Nohemi Eleonora Barrera</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#E6A800;">María Fernanda Perez </span><span class="note-name" style="background:#E6A800;">Yurlith Cristina Vera</span><span class="note-name" style="background:#E6A800;">Daniela Sánchez Gómez </span><span class="note-name" style="background:#E6A800;">Liliana Ivanny Bermudez</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="background:#0050FF;">Daniela Sánchez Gómez </span><span class="note-name" style="background:#0050FF;">Liliana Ivanny Bermudez</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr></tbody></table></div>
+      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h" style="background:#00707E;">Lunes<span class="day-date">19/10</span></th><th class="sh day-h" style="background:#00707E;">Martes<span class="day-date">20/10</span></th><th class="sh day-h" style="background:#00707E;">Miércoles<span class="day-date">21/10</span></th><th class="sh day-h" style="background:#00707E;">Jueves<span class="day-date">22/10</span></th><th class="sh day-h" style="background:#00707E;">Viernes<span class="day-date">23/10</span></th><th class="sh day-h" style="background:#B00020;">Sábado<span class="day-date">24/10</span></th><th class="sh day-h" style="background:#B00020;">Domingo<span class="day-date">25/10</span></th></tr><tr class="sala-row"><td class="sala-lbl" style="background:#1F4BFF;">Sala 1</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Yurlith Cristina Vera</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Liliana Ivanny Bermudez</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s1" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nohemi Eleonora Barrera</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF6D00;">Sala 2</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nohemi Eleonora Barrera</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">María Fernanda Perez </span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Yurlith Cristina Vera</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s2" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniela Sánchez Gómez </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Sala 3</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Liliana Ivanny Bermudez</span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nohemi Eleonora Barrera</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s3" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-23" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Liliana Ivanny Bermudez</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#FF2D87;">Sala 4</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Liliana Ivanny Bermudez</span></div></td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Yurlith Cristina Vera</span></div></td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniela Sánchez Gómez </span></div></td><td class="grid-cell" data-preview-date="2026-10-22" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nohemi Eleonora Barrera</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s4" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#8A2BE2;">Sala 5</td><td class="grid-cell" data-preview-date="2026-10-19" data-preview-slot="s5" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">María Fernanda Perez </span></div></td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#0091EA;">Gastro AM / Recup PM</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-21" data-preview-slot="recup" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">María Fernanda Perez </span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#D97A00;">Resonancia Magnética</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-10-20" data-preview-slot="resonancia" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nohemi Eleonora Barrera</span></div></td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 Sexto piso · Consultorio 614</span></td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-23" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row"><td class="sala-lbl" style="background:#7A00FF;">Sala 6 (Comodín)</td><td class="cell-empty" data-preview-date="2026-10-19" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-20" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-21" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-10-22" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-na">No los viernes</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="urg-row"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-urg"><span class="urg-name">Daniela Sánchez Gómez </span><span class="urg-name">Liliana Ivanny Bermudez</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#E6A800;">María Fernanda Perez </span><span class="note-name" style="border-color:#E6A800;">Yurlith Cristina Vera</span><span class="note-name" style="border-color:#E6A800;">Daniela Sánchez Gómez </span><span class="note-name" style="border-color:#E6A800;">Liliana Ivanny Bermudez</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Daniela Sánchez Gómez </span><span class="note-name" style="border-color:#0050FF;">Liliana Ivanny Bermudez</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr></tbody></table></div>
   </section><section class="seccion" style="--a:#FF1F4B;">
     <div class="sec-h"><span class="sec-num">2</span><span class="sec-titulo">🔴 Rotación Individual — Bosa</span><span class="sec-sub">5 estudiantes</span></div>
     <div class="students-grid"><div class="student-card" style="--u:#F59E0B;">
@@ -343,27 +496,23 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF2D87;">Sala 5</span></td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF6D00;">Sala 2</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span></td>
-        <td><span style="font-weight:800;">Gastro AM / Recup PM</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">Gastro AM / Recup PM</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr></tbody>
           </table>
         </div>
@@ -383,27 +532,23 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#1F4BFF;">Sala 1</span></td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
-        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#8A2BE2;">Sala 4</span></td>
+        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala 4</span></td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span></td>
-        <td><span style="font-weight:800;">Sala 2</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">Sala 2</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr></tbody>
           </table>
         </div>
@@ -423,32 +568,27 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF6D00;">Sala 2</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
         <td><span class="badge-ind" style="background:#D97A00;color:#fff;">🧲 Resonancia Magnética</span></td>
-        <td><span style="font-weight:700;color:#D97A00;">Resonancia Magnética</span></td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span></td>
-        <td><span style="font-weight:800;">Sala 4</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">Sala 4</span></td>
       </tr><tr data-date="2026-10-23">
         <td class="ind-fecha">23/10/2026</td>
         <td class="ind-dia">Vie</td>
-        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#1F4BFF;">Sala 1</span></td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
       </tr></tbody>
           </table>
         </div>
@@ -468,35 +608,29 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
-        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#1F4BFF;">Sala 1</span></td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#8A2BE2;">Sala 4</span></td>
+        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala 4</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr><tr data-date="2026-10-23">
         <td class="ind-fecha">23/10/2026</td>
         <td class="ind-dia">Vie</td>
-        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#FF6D00;">Sala 2</span></td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
       </tr><tr data-date="2026-10-25"><td class="ind-fecha">25/10/2026</td><td class="ind-dia">Dom</td>
-            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td>
-            <td style="font-family:monospace;font-size:10px;">—</td></tr></tbody>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
           </table>
         </div>
         <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Gastro AM / Recup PM</span><b>1d</b></div><div class="ss-row"><span style="color:#E6A800;">Resonancia Magnética</span><b>1d</b></div></div>
@@ -515,35 +649,29 @@ b,strong{font-weight:800;}
       <div class="sc-body">
         <div class="sc-tbl">
           <table class="ind-table">
-            <thead><tr><th>Fecha</th><th>Día</th><th>Tipo</th><th>Asignación</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
             <tbody><tr data-date="2026-10-19">
         <td class="ind-fecha">19/10/2026</td>
         <td class="ind-dia">Lun</td>
-        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#8A2BE2;">Sala 4</span></td>
+        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala 4</span></td>
       </tr><tr data-date="2026-10-20">
         <td class="ind-fecha">20/10/2026</td>
         <td class="ind-dia">Mar</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-21">
         <td class="ind-fecha">21/10/2026</td>
         <td class="ind-dia">Mié</td>
-        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#1F4BFF;">Sala 1</span></td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
       </tr><tr data-date="2026-10-22">
         <td class="ind-fecha">22/10/2026</td>
         <td class="ind-dia">Jue</td>
         <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
-        <td>—</td>
       </tr><tr data-date="2026-10-23">
         <td class="ind-fecha">23/10/2026</td>
         <td class="ind-dia">Vie</td>
-        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala</span></td>
-        <td><span style="font-weight:700;color:#00A86B;">Sala 3</span></td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
       </tr><tr data-date="2026-10-25"><td class="ind-fecha">25/10/2026</td><td class="ind-dia">Dom</td>
-            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td>
-            <td style="font-family:monospace;font-size:10px;">—</td></tr></tbody>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
           </table>
         </div>
         <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>2d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>1d</b></div></div>
@@ -555,8 +683,7 @@ b,strong{font-weight:800;}
 
 <footer class="foot"><div class="foot-in">
   <div><b>Docente responsable:</b> Dr. Andrés Robayo · Especialista en Anestesiología y Reanimación · Docente de Pregrado</div>
-  <div><b>Universidades:</b> UD: UDCA · RO: Rosario · BO: El Bosque · AN: Ant. Nariño</div>
-  <div class="copy">© 2026 Dr. Andrés Robayo · Uso académico interno exclusivo · Kennedy + Bosa · Año 2026 · Festivos: calendario oficial Colombia</div>
+  <div class="copy">© 2026 Dr. Andrés Robayo · Uso académico interno exclusivo · Festivos: calendario oficial Colombia</div>
 </div></footer>
 <script>
 function showHospTab(t,btn){
@@ -566,7 +693,7 @@ function showHospTab(t,btn){
   if(btn) btn.classList.add('active');
   var tabs=document.querySelector('.hosp-tabs'); if(tabs) window.scrollTo({top:tabs.offsetTop-8,behavior:'smooth'});
 }
-var WEEKS=[{"i":0,"start":"2026-10-19","end":"2026-10-25"},{"i":1,"start":"2026-10-26","end":"2026-11-01"}];
+var WEEKS=[{"i":0,"start":"2026-10-19","end":"2026-10-25"},{"i":1,"start":"2026-10-26","end":"2026-11-01"},{"i":2,"start":"2026-11-02","end":"2026-11-04"}];
 function showWeek(sel,btn){
   document.querySelectorAll('.wp-btn').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');

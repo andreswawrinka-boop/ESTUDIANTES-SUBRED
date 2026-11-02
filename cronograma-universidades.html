@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rotación de Salas — Anestesiología — Kennedy + Bosa — Semana 3 (02/11/2026 → 08/11/2026)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1B1F3B;--mut:#5B6180;--bg:#F3F5FB;--ln:#E2E6F0;--k:#2563EB;--b:#E11D48;--y:#FACC15;--g:#16A34A;--o:#EA580C;--p:#7C3AED;--c:#0891B2;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px;line-height:1.45;color:var(--ink);background:var(--bg);font-variant-numeric:tabular-nums;}
+b,strong{font-weight:800;}
+a{color:var(--k);font-weight:800;}
+button{font-family:inherit;}
+/* ── Encabezado ── */
+.top{background:linear-gradient(115deg,#2563EB 0%,#7C3AED 55%,#DB2777 100%);color:#fff;}
+.top-in{max-width:1440px;margin:0 auto;padding:18px 18px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+.top-ico{width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:28px;flex:none;}
+.top-l{flex:1 1 320px;min-width:0;}
+.top-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.9;}
+.top h1{font-weight:900;font-size:clamp(24px,3.4vw,34px);line-height:1.05;margin:2px 0 8px;}
+.top-sub{display:flex;flex-wrap:wrap;gap:6px;}
+.top-sub span{background:rgba(255,255,255,.18);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:800;}
+.top-r{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{display:inline-flex;gap:6px;align-items:center;background:#fff;color:var(--ink);padding:4px 11px 4px 4px;border-radius:999px;font-size:12px;font-weight:800;}
+.pill b{background:var(--u);color:#fff;border-radius:999px;padding:1px 8px;font-size:11px;}
+.cont{max-width:1440px;margin:0 auto;padding:14px 12px 40px;}
+/* ── Avisos ── */
+.alert{display:flex;gap:12px;align-items:center;background:#FEF9C3;border:2px solid var(--y);border-radius:14px;padding:10px 14px;margin-bottom:10px;font-size:14px;}
+.alert .al-ico{font-size:24px;line-height:1;}
+.alert u{color:var(--b);font-weight:900;text-decoration-thickness:2px;}
+.nt,.nota{background:#fff;border:2px solid var(--ln);border-left:6px solid var(--o);border-radius:12px;padding:8px 12px;font-size:13px;margin-bottom:10px;}
+.nt b{color:var(--o);}
+.week-banner{background:var(--ink);color:#fff;border-radius:12px;padding:10px 14px;font-weight:900;font-size:16px;margin-bottom:10px;}
+/* ── Barra fija de navegación ── */
+.nav{position:sticky;top:0;z-index:40;background:rgba(243,245,251,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -12px 12px;padding:8px 12px;border-bottom:1px solid var(--ln);}
+.nav-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.hosp-tabs{display:flex;gap:6px;background:#fff;border:2px solid var(--ln);border-radius:999px;padding:4px;}
+.hosp-tab{border:0;background:transparent;border-radius:999px;padding:8px 18px;font-weight:900;font-size:15px;color:var(--mut);cursor:pointer;display:inline-flex;align-items:center;gap:7px;min-height:42px;}
+.hosp-tab span{background:var(--ln);color:var(--ink);border-radius:999px;padding:0 8px;font-size:12px;}
+.hosp-tab[data-tab=kennedy].active{background:var(--k);color:#fff;}
+.hosp-tab[data-tab=bosa].active{background:var(--b);color:#fff;}
+.hosp-tab.active span{background:rgba(255,255,255,.25);color:#fff;}
+.jump{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+.jp{border:2px solid var(--ln);background:#fff;color:var(--ink);border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px;cursor:pointer;min-height:42px;}
+.jp:hover{border-color:var(--p);color:var(--p);}
+.week-picker{display:flex;gap:6px;align-items:center;margin-top:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin;}
+.week-picker .wp-label{font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);flex:none;}
+.wp-btn{flex:none;display:inline-flex;flex-direction:column;align-items:center;font-weight:900;font-size:13px;color:var(--ink);background:#fff;border:2px solid var(--ln);border-radius:12px;padding:5px 12px;cursor:pointer;line-height:1.15;}
+.wp-btn:hover{border-color:var(--p);}
+.wp-btn .wp-range{font-weight:700;font-size:11px;color:var(--mut);}
+.wp-btn.active{background:var(--p);border-color:var(--p);color:#fff;}
+.wp-btn.active .wp-range{color:#EDE9FE;}
+/* ── Secciones ── */
+.seccion{background:#fff;border-radius:18px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 2px rgba(27,31,59,.06),0 6px 20px rgba(27,31,59,.06);border-top:6px solid var(--a);}
+.sec-h{padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.sec-titulo{font-weight:900;font-size:19px;color:var(--ink);}
+.sec-extra{background:var(--a);color:#fff;font-size:11.5px;font-weight:800;padding:2px 10px;border-radius:999px;}
+.sec-sub{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--mut);}
+.sec-b{overflow-x:auto;border-top:1px solid var(--ln);}
+/* ── Cuadro semanal: cuadrícula de casillas separadas ── */
+.cal-table{width:100%;border-collapse:separate;border-spacing:4px;font-size:13px;min-width:940px;table-layout:fixed;background:#fff;}
+.week-title-row td{padding:0;}
+.week-title{background:var(--ink);color:#fff;font-weight:800;font-size:14px;padding:8px 12px;border-radius:10px;}
+.wk-n{background:var(--y);color:var(--ink);font-weight:900;padding:1px 10px;border-radius:999px;margin-right:6px;}
+.th-meta{background:var(--ink);color:#fff;text-align:left;padding:6px 10px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;position:sticky;left:0;z-index:3;border-radius:10px;}
+.day-h{background:var(--d);color:#fff;text-align:center;padding:7px 3px;font-weight:900;font-size:15px;line-height:1.05;border-radius:10px;}
+.day-h .day-date{display:block;font-size:12.5px;font-weight:800;margin-top:2px;}
+.day-h .day-fest{display:inline-block;font-size:9px;font-weight:900;background:#fff;color:var(--b);border-radius:999px;padding:0 6px;margin-top:3px;}
+.sala-lbl{background:var(--r,var(--ink));font-weight:900;font-size:12.5px;color:#fff;padding:7px 10px;text-align:left;line-height:1.2;position:sticky;left:0;z-index:2;border-radius:10px;box-shadow:-4px 0 0 #fff;}
+.sala-lbl .lbl-sub{display:block;font-size:10px;font-weight:700;}
+.sala-row td,.urg-row td,.note-row td,.night-row td{vertical-align:middle;border-radius:10px;}
+/* Cada casilla lleva un tinte del color de su fila: la fila se lee de un vistazo */
+.sala-row td:not(.sala-lbl),.urg-row td:not(.sala-lbl),.note-row td:not(.sala-lbl),.night-row td:not(.sala-lbl){background:color-mix(in srgb,var(--r) 9%,#fff);}
+/* Casilla con estudiante: fondo blanco y marco del color de la sala */
+.sala-row td.grid-cell,.night-row td.grid-cell{background:#fff;box-shadow:inset 0 0 0 2.5px var(--r);}
+.sala-row:hover td:not(.sala-lbl){box-shadow:inset 0 0 0 2.5px var(--r);}
+.grid-cell{text-align:center;padding:6px 4px;overflow-wrap:anywhere;}
+.gc-in{margin:1px 0;}
+.gc-extra{border-top:2px dashed var(--o);margin-top:4px;padding-top:4px;}
+.chip{display:inline-block;color:#fff;font-size:10px;font-weight:900;padding:1px 6px;border-radius:999px;margin-right:4px;vertical-align:1px;}
+.nm{font-weight:800;font-size:13px;line-height:1.2;color:#000;}
+.gc-badge{display:inline-block;color:#fff;font-size:9.5px;font-weight:900;padding:0 6px;border-radius:999px;margin:3px 2px 0;}
+.cell-empty{text-align:center;color:color-mix(in srgb,var(--r,#1B1F3B) 45%,#fff);font-size:15px;font-weight:900;}
+.sala-row td.cell-wknd,.note-row td.cell-wknd,.night-row td.cell-wknd,.cell-wknd{text-align:center;color:#E11D48;font-weight:900;background:repeating-linear-gradient(135deg,#FFE4E6 0 6px,#fff 6px 12px)!important;box-shadow:none!important;}
+.cell-na{text-align:center;color:var(--ink);font-size:10.5px;font-weight:800;}
+.sala-row td.night-cell,.night-row td.night-cell{background:#EDE4FF!important;box-shadow:inset 0 0 0 2.5px #7C3AED!important;text-align:center;padding:5px;}
+.night-cell .chip{background:#7C3AED!important;color:#fff!important;}
+.night-moon{display:block;font-size:10px;font-weight:900;color:#7C3AED;margin-top:2px;}
+.sala-row td.cell-shared{box-shadow:inset 0 0 0 3px var(--o)!important;background:#FFF1E6!important;}
+.cell-urg{text-align:center;padding:5px;}
+.urg-name{display:inline-block;background:#fff;color:#000;border:2px solid #E11D48;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:900;margin:1px;}
+.urg-slot{color:#E11D48;font-weight:900;}
+.note-lbl{font-size:12px;}
+.note-cell{text-align:center;padding:5px;}
+.note-name{display:inline-block;background:#fff;color:#000;border:2px solid;border-radius:999px;padding:0 8px;font-size:11.5px;font-weight:800;margin:1px;}
+.cell-dot{color:color-mix(in srgb,var(--r,#1B1F3B) 45%,#fff);font-weight:900;}
+.cal-table .pad-cell{background:transparent!important;box-shadow:none!important;}
+/* ── Vista por día (celular) ── */
+.agenda,.ag-toggle{display:none;}
+.ag-week{padding:0 10px 6px;}
+.ag-wt{background:var(--ink);color:#fff;font-weight:900;font-size:14px;padding:8px 12px;border-radius:12px;margin:8px 0;}
+.ag-day{border:2.5px solid var(--d);border-radius:14px;margin-bottom:10px;overflow:hidden;background:#fff;}
+.ag-dh{background:var(--d);color:#fff;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:900;font-size:17px;}
+.ag-dh small{font-size:14px;font-weight:800;margin-left:4px;}
+.ag-dh em{font-style:normal;background:#fff;color:var(--b);font-size:11px;font-weight:900;border-radius:999px;padding:1px 8px;}
+.ag-day ul{list-style:none;padding:6px;}
+.ag-day li{display:flex;align-items:stretch;gap:8px;border-radius:10px;background:color-mix(in srgb,var(--r) 10%,#fff);margin-bottom:5px;overflow:hidden;}
+.ag-day li:last-child{margin-bottom:0;}
+.ag-s{flex:0 0 112px;background:var(--r);color:#fff;font-weight:900;font-size:13px;padding:9px 10px;display:flex;align-items:center;line-height:1.15;}
+.ag-n{flex:1;min-width:0;padding:8px 8px 8px 0;font-size:15px;line-height:1.3;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;}
+.ag-n b{font-weight:900;color:#000;}
+.ag-n .chip{margin-right:0;}
+.ag-n i{font-style:normal;flex-basis:100%;font-size:12px;font-weight:900;color:var(--t);}
+.ag-nov .ag-n{font-size:14px;}
+.ag-empty{border-style:dashed;}
+.ag-empty .ag-dh{padding:6px 12px;font-size:15px;}
+.ag-empty p{padding:6px 12px;font-size:13px;font-weight:800;color:var(--ink);}
+.is-today.ag-day{box-shadow:0 0 0 4px var(--y);}
+.is-today .ag-dh span::after,th.is-today::after{content:'HOY';display:inline-block;margin-left:8px;background:var(--y);color:var(--ink);border-radius:999px;padding:0 8px;font-size:11px;font-weight:900;vertical-align:2px;}
+th.is-today{box-shadow:inset 0 0 0 3px var(--y);}
+th.is-today::after{display:block;width:max-content;margin:3px auto 0;}
+.hoy-btn{border-color:var(--y)!important;background:#FEF9C3!important;}
+@media(max-width:760px){
+  .sec-cal .sec-b{display:none;}
+  .sec-cal .agenda{display:block;}
+  .ag-toggle{display:inline-flex;margin-left:auto;border:2px solid var(--a);background:#fff;color:var(--ink);border-radius:999px;padding:7px 12px;font-weight:900;font-size:13px;min-height:38px;align-items:center;cursor:pointer;}
+  .only-desk{display:none;}
+  body.ver-tabla .sec-cal .sec-b{display:block;}
+  body.ver-tabla .sec-cal .agenda{display:none;}
+}
+/* Separador entre salas y novedades */
+.sep-row td{padding:10px 0 2px;background:#fff;}
+.sep-lbl{position:sticky;left:0;z-index:2;font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);padding-left:4px!important;}
+.sep-fill{background:linear-gradient(var(--ink),var(--ink)) left 70%/100% 3px no-repeat #fff!important;}
+/* ── Buscador y fichas ── */
+.find{padding:0 16px 12px;}
+.find input{width:100%;max-width:460px;border:2px solid var(--ln);border-radius:999px;padding:10px 16px;font:inherit;font-size:15px;font-weight:700;background:var(--bg);color:var(--ink);}
+.find input:focus{outline:0;border-color:var(--a);background:#fff;}
+.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:12px;padding:0 12px 14px;}
+.student-card{border:2px solid var(--ln);border-radius:16px;overflow:hidden;background:#fff;}
+.sc-h{background:var(--u);color:#fff;padding:9px 12px;display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap;}
+.sc-name{font-weight:900;font-size:16px;background:#fff;color:#000;padding:1px 12px;border-radius:999px;}
+.sc-meta,.ac-m{text-shadow:0 1px 2px rgba(0,0,0,.28);}
+.sc-meta{font-size:12px;font-weight:700;opacity:.95;flex:1 1 auto;}
+.sc-acad{background:#fff;color:var(--ink);border:0;border-radius:999px;padding:4px 11px;font-size:12px;font-weight:900;cursor:pointer;}
+.sc-stats{display:flex;flex-wrap:wrap;gap:5px;padding:9px 12px;border-bottom:1px solid var(--ln);}
+.st{background:color-mix(in srgb,var(--c) 11%,#fff);color:var(--ink);border-radius:999px;padding:2px 9px;font-size:11.5px;font-weight:700;}
+.st b{color:var(--c);}
+.sc-body{display:grid;grid-template-columns:1fr 120px;}
+.sc-tbl{overflow-x:auto;border-right:1px solid var(--ln);}
+.sc-side{padding:8px 10px;background:#FAFBFE;}
+.sc-side-t{font-size:10.5px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:4px;}
+.ss-row{display:flex;justify-content:space-between;gap:6px;padding:2px 0;border-bottom:1px dashed var(--ln);font-size:11.5px;font-weight:800;}
+.sc-none{font-size:11.5px;color:var(--mut);font-weight:700;}
+.ind-table{width:100%;border-collapse:collapse;font-size:12px;}
+.ind-table thead th{background:#fff;color:var(--mut);padding:5px 8px;text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:900;border-bottom:2px solid var(--ln);}
+.ind-table td{padding:4px 8px;border-bottom:1px solid #EEF0F6;vertical-align:middle;white-space:nowrap;}
+.ind-table tbody tr:hover td{background:#F7F8FD;}
+.ind-fecha{font-weight:800;}
+.ind-dia{font-weight:900;color:var(--mut);}
+.badge-ind{display:inline-block;padding:1px 9px;border-radius:999px;font-size:11px;font-weight:900;white-space:nowrap;}
+.r-night td:first-child{box-shadow:inset 4px 0 var(--p);}
+.r-post td:first-child{box-shadow:inset 4px 0 #A855F7;}
+.ind-table td:last-child{white-space:normal;}
+.r-note-td{padding:0 8px 4px 18px!important;font-size:10.5px;font-weight:800;color:var(--p);white-space:normal!important;}
+/* ── Cronograma académico ── */
+.acad-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px;}
+.acad-btn{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;background:#fff;color:var(--ink);border:2px solid var(--u);border-radius:14px;padding:7px 14px;cursor:pointer;line-height:1.2;text-align:left;min-height:44px;}
+.acad-btn b{font-size:14px;font-weight:900;color:var(--u);}
+.acad-btn span{font-size:11.5px;font-weight:700;color:var(--mut);}
+.acad-btn:hover{box-shadow:0 0 0 2px var(--u);}
+.acad-btn.active{background:var(--u);}
+.acad-btn.active b,.acad-btn.active span{color:#fff;}
+.acad-grid{padding:0 12px 12px;}
+.acad-pane{display:none!important;}
+.acad-pane.on{display:block!important;}
+.acad-card{border:2px solid var(--ln);border-radius:16px;overflow:hidden;background:#fff;max-width:920px;}
+.acad-card .ac-h{background:var(--u);color:#fff;padding:9px 12px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 10px;}
+.acad-card .ac-t{font-weight:900;font-size:16px;background:#fff;color:#000;padding:1px 12px;border-radius:999px;}
+.acad-card .ac-m{font-size:12px;font-weight:800;}
+.acad-card .ac-s{padding:8px 12px;font-size:12px;font-weight:700;color:var(--mut);border-bottom:1px solid var(--ln);}
+.acad-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.acad-table thead th{color:var(--mut);padding:6px 8px;text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:900;border-bottom:2px solid var(--ln);}
+.acad-table td{padding:6px 8px;border-bottom:1px solid #EEF0F6;vertical-align:middle;}
+.acad-table .a-n{font-weight:900;white-space:nowrap;}
+.acad-table .a-f{font-weight:700;white-space:nowrap;font-size:12px;}
+.acad-table .a-v{text-align:right;white-space:nowrap;}
+.a-pct{display:inline-block;color:#fff;background:var(--u);border-radius:999px;padding:1px 9px;font-weight:900;font-size:12px;}
+.a-ex td{background:#FFF1F2;}
+.a-ex .a-pct{background:var(--b);}
+.a-ex .a-n{color:var(--b);}
+.a-tm{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;}
+.a-tm span{background:#fff;border:1.5px solid #FDA4AF;color:#000;border-radius:999px;padding:0 8px;font-size:10.5px;font-weight:700;}
+.a-ind td{font-size:12px;font-weight:700;color:var(--p);background:#F5F3FF;}
+/* ── Edición en la vista previa (no queda en el archivo final) ── */
+
+
+
+
+
+
+
+/* ── Pie ── */
+.foot{background:var(--ink);color:#fff;padding:14px 18px;font-size:12.5px;line-height:1.6;}
+.foot-in{max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;gap:4px 24px;}
+.foot b{color:#A5B4FC;}
+.foot .copy{flex-basis:100%;color:#C7CBE0;font-size:11.5px;}
+/* ── Celular ── */
+@media(max-width:760px){
+  body{font-size:15px;}
+  .top-in{padding:14px 14px 12px;}
+  .top-ico{display:none;}
+  .nav{margin:0 -12px 10px;padding:6px 10px;}
+  .nav-row{gap:6px;}
+  .hosp-tab{min-height:38px;padding:6px 10px;}
+  .jp{min-height:36px;}
+  .week-picker{margin-top:6px;}
+  .wp-btn{padding:4px 10px;}
+  .hosp-tabs{flex:1 1 100%;}
+  .hosp-tab{flex:1;justify-content:center;}
+  .jump{margin-left:0;flex:1 1 100%;}
+  .jp{flex:1;padding:8px 6px;font-size:13px;}
+  .students-grid{grid-template-columns:1fr;padding:0 10px 12px;}
+  .sc-body{grid-template-columns:1fr;}
+  .sc-tbl{border-right:0;border-bottom:1px solid var(--ln);}
+  .sec-sub{margin-left:0;flex-basis:100%;}
+  .acad-btn{flex:1 1 100%;}
+  .week-picker .wp-label{display:none;}
+  .find{padding:0 12px 10px;}
+  .find input{font-size:16px;max-width:none;}
+  .sec-h{padding:10px 12px;}
+  .sec-titulo{font-size:17px;}
+  .ind-table{font-size:13px;}
+  .ind-table td{padding:6px 8px;}
+  .badge-ind{font-size:12px;padding:2px 9px;}
+  .sc-stats .st{font-size:12.5px;padding:3px 10px;}
+  .acad-table{font-size:13px;}
+  .cal-table{min-width:860px;border-spacing:3px;}
+  .cal-table col:first-child{width:100px!important;}
+  .sala-lbl{font-size:11.5px;padding:6px 7px;}
+  .sala-lbl .lbl-sub{display:none;}
+  .th-meta{font-size:9.5px;padding:6px 7px;}
+  .nm{font-size:12.5px;}
+}
+/* ── Impresión ── */
+@media print{
+  @page{size:landscape;margin:7mm;}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  body{background:#fff;}
+  .nav,.week-picker,.hosp-tabs,.find,.jump,.acad-tabs,.sc-acad{display:none!important;}
+  .hosp-panel{display:block!important;}
+  .acad-pane{display:block!important;margin-bottom:8px;}
+  tbody.week-body{display:table-row-group!important;}
+  .agenda,.ag-toggle,.hoy-btn{display:none!important;}
+  .sec-cal .sec-b{display:block!important;}
+  tr[data-date]{display:table-row!important;}
+  .seccion{box-shadow:none;border:1px solid var(--ln);}
+  .seccion,.student-card,.acad-card{break-inside:avoid;}
+}
+</style></head><body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="top-ico">🩺</div>
+    <div class="top-l">
+      <div class="top-tag">Anestesiología · Subred Suroccidente · Bogotá</div>
+      <h1>Rotación de salas</h1>
+      <div class="top-sub"><span>🏥 Kennedy + Bosa</span><span>📅 20/10/2026 → 27/11/2026</span><span>👥 9 estudiantes</span></div>
+    </div>
+    <div class="top-r"><span class="pill" style="--u:#3B82F6;"><b>SM</b>San Martín</span><span class="pill" style="--u:#F59E0B;"><b>UD</b>UDCA</span><span class="pill" style="--u:#EF4444;"><b>RO</b>Rosario</span><span class="pill" style="--u:#8B5CF6;"><b>AN</b>Ant. Nariño</span></div>
+  </div>
+</header>
+
+<div class="cont"><div class="week-banner">📅 Semana 3 — 02/11/2026 → 08/11/2026</div>
+
+<div class="alert"><span class="al-ico">⚠️</span><div><b>¿Te quedaste sin sala?</b> Entra a cualquier sala, registra tu <b>nota diaria</b> y avisa al coordinador. Si no lo haces, <u>cuenta como falta</u>.</div></div>
+<div class="nt"><b>🩺 Consulta externa</b> Bosa → Hospital de Bosa · Sexto piso · Consultorio 614</div>
+
+<nav class="nav"><div class="nav-row"><div class="hosp-tabs">
+        <button class="hosp-tab active" data-tab="kennedy" onclick="showHospTab('kennedy',this)">Kennedy <span>4</span></button>
+        <button class="hosp-tab" data-tab="bosa" onclick="showHospTab('bosa',this)">Bosa <span>5</span></button>
+      </div><div class="jump"><button type="button" class="jp hoy-btn" hidden="" onclick="goHoy()">📍 Hoy</button><button type="button" class="jp" onclick="jumpTo('sec-cal')">🗓️ Cuadro</button><button type="button" class="jp" onclick="jumpTo('sec-cards')">👤 Mi ficha</button><button type="button" class="jp" onclick="jumpTo('acad-sec')">📚 Talleres</button></div></div></nav>
+      <div class="hosp-panel" id="panel-kennedy"><section class="seccion sec-cal" style="--a:#1F4BFF;">
+    <div class="sec-h"><span class="sec-titulo">🗓️ Cuadro de salas · KENNEDY</span><span class="sec-sub only-desk">Desliza → para ver todos los días</span><button type="button" class="ag-toggle" onclick="toggleTabla()">🔁 Ver como tabla</button></div>
+    <div class="sec-b"><table class="cal-table transpose"><colgroup><col style="width:150px;"></colgroup><tbody class="week-body" data-week="2">
+      <tr class="week-title-row"><td colspan="8" class="week-title"><span class="wk-n">SEMANA 3</span> 02/11/2026 → 08/11/2026</td></tr>
+      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h day-off" data-day="2026-11-02" style="--d:#E11D48;">Lunes<span class="day-date">02/11</span><span class="day-fest">FESTIVO</span></th><th class="sh day-h" data-day="2026-11-03" style="--d:#0891B2;">Martes<span class="day-date">03/11</span></th><th class="sh day-h" data-day="2026-11-04" style="--d:#EA580C;">Miércoles<span class="day-date">04/11</span></th><th class="sh day-h" data-day="2026-11-05" style="--d:#7C3AED;">Jueves<span class="day-date">05/11</span></th><th class="sh day-h" data-day="2026-11-06" style="--d:#16A34A;">Viernes<span class="day-date">06/11</span></th><th class="sh day-h day-off" data-day="2026-11-07" style="--d:#E11D48;">Sábado<span class="day-date">07/11</span></th><th class="sh day-h day-off" data-day="2026-11-08" style="--d:#E11D48;">Domingo<span class="day-date">08/11</span></th></tr><tr class="sala-row" style="--r:#2563EB;"><td class="sala-lbl" style="background:#2563EB;">Sala 1</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Maria Natali Moran pachón</span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Yolimar Valeria Ortega Londoño </span></div></td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="s1" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s1" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Maria Natali Moran pachón</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#EA580C;"><td class="sala-lbl" style="background:#EA580C;">Sala 2</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Sindy Tatiana guerrero trujillo </span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s2" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Maria Natali Moran pachón</span></div></td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="s2" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#059669;"><td class="sala-lbl" style="background:#059669;">Sala 3</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Olga Tatiana Molina Devia </span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Sindy Tatiana guerrero trujillo </span></div></td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="s3" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s3" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Olga Tatiana Molina Devia </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#7A00FF;"><td class="sala-lbl" style="background:#7A00FF;">Sala 4 (Comodín)</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="comodin" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#DB2777;"><td class="sala-lbl" style="background:#DB2777;">Sala 5</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="s4" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s4" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Yolimar Valeria Ortega Londoño </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#00A86B;"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="interconsult" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Yolimar Valeria Ortega Londoño </span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="interconsult" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Olga Tatiana Molina Devia </span></div></td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="interconsult" data-preview-hosp="kennedy">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="interconsult" data-preview-hosp="kennedy"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Sindy Tatiana guerrero trujillo </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#E64A00;"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 CAPS 29 · Carrera 78 # 35-71 sur</span></td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="consulta" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#00968A;"><td class="sala-lbl" style="background:#00968A;">Hospital Tintal</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="tintal" data-preview-hosp="kennedy">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sep-row"><td class="sep-lbl">📌 Turnos y novedades</td><td class="sep-fill" colspan="7"></td></tr><tr class="urg-row" style="--r:#E11D48;"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-urg"><span class="urg-name">Sindy Tatiana guerrero trujillo </span><span class="urg-name">Maria Natali Moran pachón</span></td></tr><tr class="note-row" style="--r:#FF6D00;"><td class="sala-lbl note-lbl" style="background:#FF6D00;">📝 Examen Final</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#FF6D00;">Sindy Tatiana guerrero trujillo </span><span class="note-name" style="border-color:#FF6D00;">Maria Natali Moran pachón</span><span class="note-name" style="border-color:#FF6D00;">Yolimar Valeria Ortega Londoño </span><span class="note-name" style="border-color:#FF6D00;">Olga Tatiana Molina Devia </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row" style="--r:#E6A800;"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="note-name" style="border-color:#E6A800;">Sindy Tatiana guerrero trujillo </span><span class="note-name" style="border-color:#E6A800;">Maria Natali Moran pachón</span><span class="note-name" style="border-color:#E6A800;">Yolimar Valeria Ortega Londoño </span><span class="note-name" style="border-color:#E6A800;">Olga Tatiana Molina Devia </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#E6A800;">Sindy Tatiana guerrero trujillo </span><span class="note-name" style="border-color:#E6A800;">Maria Natali Moran pachón</span><span class="note-name" style="border-color:#E6A800;">Yolimar Valeria Ortega Londoño </span><span class="note-name" style="border-color:#E6A800;">Olga Tatiana Molina Devia </span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row" style="--r:#0050FF;"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Yolimar Valeria Ortega Londoño </span><span class="note-name" style="border-color:#0050FF;">Olga Tatiana Molina Devia </span></td></tr></tbody></table></div>
+    <div class="agenda"><div class="week-body ag-week" data-week="2"><div class="ag-wt"><span class="wk-n">SEMANA 3</span>02/11 → 08/11</div><div class="ag-day" data-day="2026-11-02" style="--d:#E11D48;"><div class="ag-dh"><span>Lunes <small>02/11</small></span><em>FESTIVO</em></div><ul><li class="ag-nov" style="--r:#CA8A04;"><span class="ag-s">📚 Clase</span><span class="ag-n"><b>Sindy Tatiana guerrero trujillo </b> · <b>Maria Natali Moran pachón</b> · <b>Yolimar Valeria Ortega Londoño </b> · <b>Olga Tatiana Molina Devia </b></span></li></ul></div><div class="ag-day" data-day="2026-11-03" style="--d:#0891B2;"><div class="ag-dh"><span>Martes <small>03/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Maria Natali Moran pachón</b></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Sindy Tatiana guerrero trujillo </b></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Olga Tatiana Molina Devia </b></span></li><li style="--r:#00A86B;"><span class="ag-s">Interconsultas</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Yolimar Valeria Ortega Londoño </b></span></li></ul></div><div class="ag-day" data-day="2026-11-04" style="--d:#EA580C;"><div class="ag-dh"><span>Miércoles <small>04/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Yolimar Valeria Ortega Londoño </b></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Maria Natali Moran pachón</b></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Sindy Tatiana guerrero trujillo </b></span></li><li style="--r:#00A86B;"><span class="ag-s">Interconsultas</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Olga Tatiana Molina Devia </b></span></li></ul></div><div class="ag-day" data-day="2026-11-05" style="--d:#7C3AED;"><div class="ag-dh"><span>Jueves <small>05/11</small></span></div><ul><li class="ag-nov" style="--r:#EA580C;"><span class="ag-s">📝 Examen final</span><span class="ag-n"><b>Sindy Tatiana guerrero trujillo </b> · <b>Maria Natali Moran pachón</b> · <b>Yolimar Valeria Ortega Londoño </b> · <b>Olga Tatiana Molina Devia </b></span></li></ul></div><div class="ag-day" data-day="2026-11-06" style="--d:#16A34A;"><div class="ag-dh"><span>Viernes <small>06/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Maria Natali Moran pachón</b></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Olga Tatiana Molina Devia </b></span></li><li style="--r:#DB2777;"><span class="ag-s">Sala 5</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Yolimar Valeria Ortega Londoño </b></span></li><li style="--r:#00A86B;"><span class="ag-s">Interconsultas</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Sindy Tatiana guerrero trujillo </b></span></li></ul></div><div class="ag-day" data-day="2026-11-07" style="--d:#E11D48;"><div class="ag-dh"><span>Sábado <small>07/11</small></span></div><ul><li class="ag-nov" style="--r:#CA8A04;"><span class="ag-s">📚 Clase</span><span class="ag-n"><b>Sindy Tatiana guerrero trujillo </b> · <b>Maria Natali Moran pachón</b> · <b>Yolimar Valeria Ortega Londoño </b> · <b>Olga Tatiana Molina Devia </b></span></li></ul></div><div class="ag-day" data-day="2026-11-08" style="--d:#E11D48;"><div class="ag-dh"><span>Domingo <small>08/11</small></span></div><ul><li style="--r:#E11D48;"><span class="ag-s">🚨 Urgencias</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Sindy Tatiana guerrero trujillo </b><br><span class="chip" style="background:#3B82F6;">SM</span><b>Maria Natali Moran pachón</b></span></li><li class="ag-nov" style="--r:#2563EB;"><span class="ag-s">🏖️ Día libre</span><span class="ag-n"><b>Yolimar Valeria Ortega Londoño </b> · <b>Olga Tatiana Molina Devia </b></span></li></ul></div></div></div>
+  </section><section class="seccion sec-cards" style="--a:#1F4BFF;">
+    <div class="sec-h"><span class="sec-titulo">👤 Fichas individuales · Kennedy</span><span class="sec-sub">4 estudiantes</span></div>
+    <div class="find"><input type="search" placeholder="🔎 Escribe tu nombre para ver solo tu ficha" oninput="findStu(this)" aria-label="Buscar estudiante"></div>
+    <div class="students-grid"><div class="student-card" data-name="Sindy Tatiana guerrero trujillo " style="--u:#3B82F6;">
+      <div class="sc-h"><span class="sc-name">Sindy Tatiana guerrero trujillo </span><span class="sc-meta">San Martín · 20/10/2026 → 08/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(0)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>10</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Lun, Sáb</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>05/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">🔀 En Bosa: Sala 4</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-11-08"><td class="ind-fecha">08/11/2026</td><td class="ind-dia">Dom</td>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>3d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>3d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Maria Natali Moran pachón" style="--u:#3B82F6;">
+      <div class="sc-h"><span class="sc-name">Maria Natali Moran pachón</span><span class="sc-meta">San Martín · 20/10/2026 → 08/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(0)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>10</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Lun, Sáb</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>05/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">🔀 En Bosa: Sala 2</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-11-08"><td class="ind-fecha">08/11/2026</td><td class="ind-dia">Dom</td>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>3d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4 (Comodín)</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Yolimar Valeria Ortega Londoño " style="--u:#3B82F6;">
+      <div class="sc-h"><span class="sc-name">Yolimar Valeria Ortega Londoño </span><span class="sc-meta">San Martín · 20/10/2026 → 08/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(0)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>8</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Lun, Sáb</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>05/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">🔀 En Bosa: Sala 1</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>2d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4 (Comodín)</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>2d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Olga Tatiana Molina Devia " style="--u:#3B82F6;">
+      <div class="sc-h"><span class="sc-name">Olga Tatiana Molina Devia </span><span class="sc-meta">San Martín · 20/10/2026 → 08/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(0)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>8</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>1</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Lun, Sáb</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>05/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">🔀 En Bosa: Sala 3</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>5d</b></div><div class="ss-row"><span style="color:#00A3D9;">Interconsultas</span><b>2d</b></div></div>
+      </div>
+    </div></div>
+  </section></div>
+      <div class="hosp-panel" id="panel-bosa" style="display:none;"><section class="seccion sec-cal" style="--a:#FF1F4B;">
+    <div class="sec-h"><span class="sec-titulo">🗓️ Cuadro de salas · BOSA</span><span class="sec-extra">incluye apoyo de Kennedy</span><span class="sec-sub only-desk">Desliza → para ver todos los días</span><button type="button" class="ag-toggle" onclick="toggleTabla()">🔁 Ver como tabla</button></div>
+    <div class="sec-b"><table class="cal-table transpose"><colgroup><col style="width:150px;"></colgroup><tbody class="week-body" data-week="2">
+      <tr class="week-title-row"><td colspan="8" class="week-title"><span class="wk-n">SEMANA 3</span> 02/11/2026 → 08/11/2026</td></tr>
+      <tr class="subhead-row"><th class="sh th-meta">Sala / Actividad</th><th class="sh day-h day-off" data-day="2026-11-02" style="--d:#E11D48;">Lunes<span class="day-date">02/11</span><span class="day-fest">FESTIVO</span></th><th class="sh day-h" data-day="2026-11-03" style="--d:#0891B2;">Martes<span class="day-date">03/11</span></th><th class="sh day-h" data-day="2026-11-04" style="--d:#EA580C;">Miércoles<span class="day-date">04/11</span></th><th class="sh day-h" data-day="2026-11-05" style="--d:#7C3AED;">Jueves<span class="day-date">05/11</span></th><th class="sh day-h" data-day="2026-11-06" style="--d:#16A34A;">Viernes<span class="day-date">06/11</span></th><th class="sh day-h day-off" data-day="2026-11-07" style="--d:#E11D48;">Sábado<span class="day-date">07/11</span></th><th class="sh day-h day-off" data-day="2026-11-08" style="--d:#E11D48;">Domingo<span class="day-date">08/11</span></th></tr><tr class="sala-row" style="--r:#2563EB;"><td class="sala-lbl" style="background:#2563EB;">Sala 1</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Danna Zaray Cordob</span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniel Felipe Rodríguez Pinto </span></div></td><td class="grid-cell" data-preview-date="2026-11-05" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Yolimar Valeria Ortega Londoño </span><span class="gc-badge" style="background:#FF1F4B;">🔀 DE KENNEDY</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s1" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Laura Valentina Rodríguez </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#EA580C;"><td class="sala-lbl" style="background:#EA580C;">Sala 2</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nicolás Pinto Osorio</span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nicolás Pinto Osorio</span></div></td><td class="grid-cell" data-preview-date="2026-11-05" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Maria Natali Moran pachón</span><span class="gc-badge" style="background:#FF1F4B;">🔀 DE KENNEDY</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s2" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nicolás Pinto Osorio</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#059669;"><td class="sala-lbl" style="background:#059669;">Sala 3</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="s3" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Danna Zaray Cordob</span></div></td><td class="grid-cell" data-preview-date="2026-11-05" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Olga Tatiana Molina Devia </span><span class="gc-badge" style="background:#FF1F4B;">🔀 DE KENNEDY</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="s3" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Danna Zaray Cordob</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#DB2777;"><td class="sala-lbl" style="background:#DB2777;">Sala 4</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="s4" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Andres Felipe Campos Rojas</span></div></td><td class="grid-cell" data-preview-date="2026-11-05" data-preview-slot="s4" data-preview-hosp="bosa"><div><span class="chip" style="background:#3B82F6;" title="San Martín">SM</span><span class="nm">Sindy Tatiana guerrero trujillo </span><span class="gc-badge" style="background:#FF1F4B;">🔀 DE KENNEDY</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="s4" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#7C3AED;"><td class="sala-lbl" style="background:#7C3AED;">Sala 5</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="s5" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniel Felipe Rodríguez Pinto </span></div></td><td class="grid-cell" data-preview-date="2026-11-04" data-preview-slot="s5" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Laura Valentina Rodríguez </span></div></td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="s5" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#0091EA;"><td class="sala-lbl" style="background:#0091EA;">Gastro AM / Recup PM</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="recup" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="recup" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Andres Felipe Campos Rojas</span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#D97A00;"><td class="sala-lbl" style="background:#D97A00;">Resonancia Magnética</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="resonancia" data-preview-hosp="bosa"><div><span class="chip" style="background:#F59E0B;" title="UDCA">UD</span><span class="nm">Laura Valentina Rodríguez </span></div></td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="resonancia" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#00A86B;"><td class="sala-lbl" style="background:#00A86B;">Interconsultas</td><td class="cell-wknd">—</td><td class="grid-cell" data-preview-date="2026-11-03" data-preview-slot="interconsult" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Andres Felipe Campos Rojas</span></div></td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="interconsult" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-11-06" data-preview-slot="interconsult" data-preview-hosp="bosa"><div><span class="chip" style="background:#8B5CF6;" title="Ant. Nariño">AN</span><span class="nm">Daniel Felipe Rodríguez Pinto </span></div></td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#E64A00;"><td class="sala-lbl" style="background:#E64A00;">Consulta Externa<span class="lbl-sub">📍 Sexto piso · Consultorio 614</span></td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="grid-cell" data-preview-date="2026-11-05" data-preview-slot="consulta" data-preview-hosp="bosa"><div><span class="chip" style="background:#EF4444;" title="Rosario">RO</span><span class="nm">Nicolás Pinto Osorio</span><span class="gc-badge" style="background:#FF6D00;">📝 EXAMEN</span></div></td><td class="cell-empty" data-preview-date="2026-11-06" data-preview-slot="consulta" data-preview-hosp="bosa">·</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sala-row" style="--r:#7A00FF;"><td class="sala-lbl" style="background:#7A00FF;">Sala 6 (Comodín)</td><td class="cell-wknd">—</td><td class="cell-empty" data-preview-date="2026-11-03" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-04" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-empty" data-preview-date="2026-11-05" data-preview-slot="comodin" data-preview-hosp="bosa">·</td><td class="cell-na">No los viernes</td><td class="cell-wknd">—</td><td class="cell-wknd">—</td></tr><tr class="sep-row"><td class="sep-lbl">📌 Turnos y novedades</td><td class="sep-fill" colspan="7"></td></tr><tr class="urg-row" style="--r:#E11D48;"><td class="sala-lbl" style="background:#FF1744;">🚨 Urgencias Sala de Cirugía</td><td class="cell-urg"><span class="urg-slot">______</span></td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-empty">·</td><td class="cell-urg"><span class="urg-name">Andres Felipe Campos Rojas</span></td><td class="cell-urg"><span class="urg-name">Daniel Felipe Rodríguez Pinto </span></td></tr><tr class="note-row" style="--r:#E6A800;"><td class="sala-lbl note-lbl" style="background:#E6A800;">📚 Clase</td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#E6A800;">Danna Zaray Cordob</span><span class="note-name" style="border-color:#E6A800;">Laura Valentina Rodríguez </span><span class="note-name" style="border-color:#E6A800;">Andres Felipe Campos Rojas</span><span class="note-name" style="border-color:#E6A800;">Daniel Felipe Rodríguez Pinto </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td></tr><tr class="note-row" style="--r:#0050FF;"><td class="sala-lbl note-lbl" style="background:#0050FF;">🏖️ Día libre</td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Danna Zaray Cordob</span><span class="note-name" style="border-color:#0050FF;">Laura Valentina Rodríguez </span><span class="note-name" style="border-color:#0050FF;">Nicolás Pinto Osorio</span><span class="note-name" style="border-color:#0050FF;">Andres Felipe Campos Rojas</span><span class="note-name" style="border-color:#0050FF;">Daniel Felipe Rodríguez Pinto </span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="cell-dot">·</span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Danna Zaray Cordob</span><span class="note-name" style="border-color:#0050FF;">Laura Valentina Rodríguez </span><span class="note-name" style="border-color:#0050FF;">Daniel Felipe Rodríguez Pinto </span></td><td class="note-cell"><span class="note-name" style="border-color:#0050FF;">Danna Zaray Cordob</span><span class="note-name" style="border-color:#0050FF;">Laura Valentina Rodríguez </span><span class="note-name" style="border-color:#0050FF;">Andres Felipe Campos Rojas</span></td></tr></tbody></table></div>
+    <div class="agenda"><div class="week-body ag-week" data-week="2"><div class="ag-wt"><span class="wk-n">SEMANA 3</span>02/11 → 08/11</div><div class="ag-day" data-day="2026-11-02" style="--d:#E11D48;"><div class="ag-dh"><span>Lunes <small>02/11</small></span><em>FESTIVO</em></div><ul><li class="ag-nov" style="--r:#2563EB;"><span class="ag-s">🏖️ Día libre</span><span class="ag-n"><b>Danna Zaray Cordob</b> · <b>Laura Valentina Rodríguez </b> · <b>Nicolás Pinto Osorio</b> · <b>Andres Felipe Campos Rojas</b> · <b>Daniel Felipe Rodríguez Pinto </b></span></li></ul></div><div class="ag-day" data-day="2026-11-03" style="--d:#0891B2;"><div class="ag-dh"><span>Martes <small>03/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Danna Zaray Cordob</b></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#EF4444;">RO</span><b>Nicolás Pinto Osorio</b></span></li><li style="--r:#7C3AED;"><span class="ag-s">Sala 5</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Daniel Felipe Rodríguez Pinto </b></span></li><li style="--r:#D97A00;"><span class="ag-s">Resonancia Magnética</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Laura Valentina Rodríguez </b></span></li><li style="--r:#00A86B;"><span class="ag-s">Interconsultas</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Andres Felipe Campos Rojas</b></span></li></ul></div><div class="ag-day" data-day="2026-11-04" style="--d:#EA580C;"><div class="ag-dh"><span>Miércoles <small>04/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Daniel Felipe Rodríguez Pinto </b></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#EF4444;">RO</span><b>Nicolás Pinto Osorio</b></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Danna Zaray Cordob</b></span></li><li style="--r:#DB2777;"><span class="ag-s">Sala 4</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Andres Felipe Campos Rojas</b></span></li><li style="--r:#7C3AED;"><span class="ag-s">Sala 5</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Laura Valentina Rodríguez </b></span></li></ul></div><div class="ag-day" data-day="2026-11-05" style="--d:#7C3AED;"><div class="ag-dh"><span>Jueves <small>05/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Yolimar Valeria Ortega Londoño </b><i style="--t:#EA580C;">📝 Examen</i></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Maria Natali Moran pachón</b><i style="--t:#EA580C;">📝 Examen</i></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Olga Tatiana Molina Devia </b><i style="--t:#EA580C;">📝 Examen</i></span></li><li style="--r:#DB2777;"><span class="ag-s">Sala 4</span><span class="ag-n"><span class="chip" style="background:#3B82F6;">SM</span><b>Sindy Tatiana guerrero trujillo </b><i style="--t:#EA580C;">📝 Examen</i></span></li><li style="--r:#E64A00;"><span class="ag-s">Consulta Externa</span><span class="ag-n"><span class="chip" style="background:#EF4444;">RO</span><b>Nicolás Pinto Osorio</b><i style="--t:#EA580C;">📝 Examen</i></span></li><li class="ag-nov" style="--r:#CA8A04;"><span class="ag-s">📚 Clase</span><span class="ag-n"><b>Danna Zaray Cordob</b> · <b>Laura Valentina Rodríguez </b> · <b>Andres Felipe Campos Rojas</b> · <b>Daniel Felipe Rodríguez Pinto </b></span></li></ul></div><div class="ag-day" data-day="2026-11-06" style="--d:#16A34A;"><div class="ag-dh"><span>Viernes <small>06/11</small></span></div><ul><li style="--r:#2563EB;"><span class="ag-s">Sala 1</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Laura Valentina Rodríguez </b></span></li><li style="--r:#EA580C;"><span class="ag-s">Sala 2</span><span class="ag-n"><span class="chip" style="background:#EF4444;">RO</span><b>Nicolás Pinto Osorio</b></span></li><li style="--r:#059669;"><span class="ag-s">Sala 3</span><span class="ag-n"><span class="chip" style="background:#F59E0B;">UD</span><b>Danna Zaray Cordob</b></span></li><li style="--r:#0091EA;"><span class="ag-s">Gastro AM / Recup PM</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Andres Felipe Campos Rojas</b></span></li><li style="--r:#00A86B;"><span class="ag-s">Interconsultas</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Daniel Felipe Rodríguez Pinto </b></span></li></ul></div><div class="ag-day" data-day="2026-11-07" style="--d:#E11D48;"><div class="ag-dh"><span>Sábado <small>07/11</small></span></div><ul><li style="--r:#E11D48;"><span class="ag-s">🚨 Urgencias</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Andres Felipe Campos Rojas</b></span></li><li class="ag-nov" style="--r:#2563EB;"><span class="ag-s">🏖️ Día libre</span><span class="ag-n"><b>Danna Zaray Cordob</b> · <b>Laura Valentina Rodríguez </b> · <b>Daniel Felipe Rodríguez Pinto </b></span></li></ul></div><div class="ag-day" data-day="2026-11-08" style="--d:#E11D48;"><div class="ag-dh"><span>Domingo <small>08/11</small></span></div><ul><li style="--r:#E11D48;"><span class="ag-s">🚨 Urgencias</span><span class="ag-n"><span class="chip" style="background:#8B5CF6;">AN</span><b>Daniel Felipe Rodríguez Pinto </b></span></li><li class="ag-nov" style="--r:#2563EB;"><span class="ag-s">🏖️ Día libre</span><span class="ag-n"><b>Danna Zaray Cordob</b> · <b>Laura Valentina Rodríguez </b> · <b>Andres Felipe Campos Rojas</b></span></li></ul></div></div></div>
+  </section><section class="seccion sec-cards" style="--a:#FF1F4B;">
+    <div class="sec-h"><span class="sec-titulo">👤 Fichas individuales · Bosa</span><span class="sec-sub">5 estudiantes</span></div>
+    <div class="find"><input type="search" placeholder="🔎 Escribe tu nombre para ver solo tu ficha" oninput="findStu(this)" aria-label="Buscar estudiante"></div>
+    <div class="students-grid"><div class="student-card" data-name="Danna Zaray Cordob" style="--u:#F59E0B;">
+      <div class="sc-h"><span class="sc-name">Danna Zaray Cordob</span><span class="sc-meta">UDCA · 23/10/2026 → 27/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(1)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>19</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>0</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>11</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Jue</b></span>
+        <span class="st" style="--c:#D50000">📝 Parcial: <b>11/11/2026</b></span>
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>25/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">🏥 Sala 3</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>4d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>5d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>3d</b></div><div class="ss-row"><span style="color:#00A3D9;">Gastro AM / Recup PM</span><b>2d</b></div><div class="ss-row"><span style="color:#E6A800;">Resonancia Magnética</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Laura Valentina Rodríguez " style="--u:#F59E0B;">
+      <div class="sc-h"><span class="sc-name">Laura Valentina Rodríguez </span><span class="sc-meta">UDCA · 23/10/2026 → 27/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(1)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>19</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>0</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>11</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Jue</b></span>
+        <span class="st" style="--c:#D50000">📝 Parcial: <b>11/11/2026</b></span>
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>25/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#D97A00;color:#fff;">🧲 Resonancia Magnética</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>3d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>2d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>3d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>2d</b></div><div class="ss-row"><span style="color:#00A3D9;">Gastro AM / Recup PM</span><b>4d</b></div><div class="ss-row"><span style="color:#E6A800;">Resonancia Magnética</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>2d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Nicolás Pinto Osorio" style="--u:#EF4444;">
+      <div class="sc-h"><span class="sc-name">Nicolás Pinto Osorio</span><span class="sc-meta">Rosario · 26/10/2026 → 06/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(2)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>9</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>0</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>2</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>—</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>05/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">📝 Examen Final</span> <span style="font-weight:800;color:#000;">Consulta Externa</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#FF6D00;color:#fff;">🏥 Sala 2</span></td>
+      </tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>3d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>1d</b></div><div class="ss-row"><span style="color:#1F4BFF;">Consulta Externa</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Andres Felipe Campos Rojas" style="--u:#8B5CF6;">
+      <div class="sc-h"><span class="sc-name">Andres Felipe Campos Rojas</span><span class="sc-meta">Ant. Nariño · 30/10/2026 → 15/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(3)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>8</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>0</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>6</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Jue</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>11/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#8A2BE2;color:#fff;">🏥 Sala 4</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#0091EA;color:#fff;">🔄 Gastro AM / Recup PM</span></td>
+      </tr><tr data-date="2026-11-07"><td class="ind-fecha">07/11/2026</td><td class="ind-dia">Sáb</td>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>2d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>1d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Gastro AM / Recup PM</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div><div class="student-card" data-name="Daniel Felipe Rodríguez Pinto " style="--u:#8B5CF6;">
+      <div class="sc-h"><span class="sc-name">Daniel Felipe Rodríguez Pinto </span><span class="sc-meta">Ant. Nariño · 30/10/2026 → 15/11/2026</span><button type="button" class="sc-acad" onclick="goAcad(3)">📚 Mi cronograma</button></div>
+      <div class="sc-stats">
+        <span class="st" style="--c:#1F4BFF">🏥 <b>8</b> días sala</span>
+        
+        
+        <span class="st" style="--c:#6A00F4">🌙 <b>0</b> noche</span>
+        <span class="st" style="--c:#0050FF">🏖️ <b>6</b> libre</span>
+        <span class="st" style="--c:#E6A800">📚 Clase: <b>Jue</b></span>
+        
+        <span class="st" style="--c:#FF6D00">📝 Examen: <b>11/11/2026</b></span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-tbl">
+          <table class="ind-table">
+            <thead><tr><th>Fecha</th><th>Día</th><th>Actividad</th></tr></thead>
+            <tbody><tr data-date="2026-11-03">
+        <td class="ind-fecha">03/11/2026</td>
+        <td class="ind-dia">Mar</td>
+        <td><span class="badge-ind" style="background:#FF2D87;color:#fff;">🏥 Sala 5</span></td>
+      </tr><tr data-date="2026-11-04">
+        <td class="ind-fecha">04/11/2026</td>
+        <td class="ind-dia">Mié</td>
+        <td><span class="badge-ind" style="background:#1F4BFF;color:#fff;">🏥 Sala 1</span></td>
+      </tr><tr data-date="2026-11-05">
+        <td class="ind-fecha">05/11/2026</td>
+        <td class="ind-dia">Jue</td>
+        <td><span class="badge-ind" style="background:#E6A800;color:#fff;">📚 Clase</span></td>
+      </tr><tr data-date="2026-11-06">
+        <td class="ind-fecha">06/11/2026</td>
+        <td class="ind-dia">Vie</td>
+        <td><span class="badge-ind" style="background:#00A86B;color:#fff;">📋 Interconsultas</span></td>
+      </tr><tr data-date="2026-11-08"><td class="ind-fecha">08/11/2026</td><td class="ind-dia">Dom</td>
+            <td><span class="badge-ind" style="background:#FF1744;color:#fff;">🚨 Urgencias Sala de Cirugía</span></td></tr></tbody>
+          </table>
+        </div>
+        <div class="sc-side"><div class="sc-side-t">Por sala</div><div class="ss-row"><span style="color:#1F4BFF;">Sala 1</span><b>1d</b></div><div class="ss-row"><span style="color:#FF6D00;">Sala 2</span><b>1d</b></div><div class="ss-row"><span style="color:#00A86B;">Sala 3</span><b>1d</b></div><div class="ss-row"><span style="color:#8A2BE2;">Sala 4</span><b>2d</b></div><div class="ss-row"><span style="color:#FF2D87;">Sala 5</span><b>1d</b></div><div class="ss-row"><span style="color:#00A3D9;">Gastro AM / Recup PM</span><b>1d</b></div><div class="ss-row"><span style="color:#FF1F4B;">Interconsultas</span><b>1d</b></div></div>
+      </div>
+    </div></div>
+  </section></div><section class="seccion acad-sec" style="--a:#0891B2;">
+    <div class="sec-h"><span class="sec-titulo">📚 Talleres y evaluaciones</span><span class="sec-sub">Toca tu universidad</span></div>
+    <div class="acad-tabs">
+      <button type="button" class="acad-btn" data-acad="0" style="--u:#3B82F6;" onclick="showAcad('0',this)"><b>📚 San Martín</b><span>20/10 → 08/11 · Sindy, Maria, Yolimar, Olga</span></button><button type="button" class="acad-btn" data-acad="1" style="--u:#F59E0B;" onclick="showAcad('1',this)"><b>📚 UDCA</b><span>23/10 → 27/11 · Danna, Laura</span></button><button type="button" class="acad-btn" data-acad="2" style="--u:#EF4444;" onclick="showAcad('2',this)"><b>📚 Rosario</b><span>26/10 → 06/11 · Nicolás</span></button><button type="button" class="acad-btn" data-acad="3" style="--u:#8B5CF6;" onclick="showAcad('3',this)"><b>📚 Ant. Nariño</b><span>30/10 → 15/11 · Andres, Daniel</span></button>
+    </div>
+    <div class="acad-grid"><div class="acad-card acad-pane" id="acad-0" data-ini="2026-10-20" data-fin="2026-11-08" style="--u:#3B82F6;">
+      <div class="ac-h"><span class="ac-t">San Martín</span><span class="ac-m">20/10/2026 → 08/11/2026 · Talleres 30% · Final 70%</span></div>
+      <div class="ac-s">👥 Sindy Tatiana guerrero trujillo  · Maria Natali Moran pachón · Yolimar Valeria Ortega Londoño  · Olga Tatiana Molina Devia </div>
+      <table class="acad-table"><thead><tr><th>Sem</th><th>Fechas</th><th>Actividad</th><th>Entrega</th><th style="text-align:right;">Valor</th></tr></thead>
+      <tbody><tr data-adate="2026-10-20"><td class="a-n">Sem 1</td><td class="a-f">20/10 → 25/10</td><td>📗 <b>Vía Aérea y Ventilador</b></td><td class="a-f">Dom 25/10</td><td class="a-v"><span class="a-pct">10%</span></td></tr><tr data-adate="2026-10-26"><td class="a-n">Sem 2</td><td class="a-f">26/10 → 01/11</td><td>📗 <b>Farmacología Anestésica 1</b></td><td class="a-f">Dom 01/11</td><td class="a-v"><span class="a-pct">10%</span></td></tr><tr data-adate="2026-11-02"><td class="a-n">Sem 3</td><td class="a-f">02/11 → 08/11</td><td>📗 <b>Dolor y Anestésicos Locales</b></td><td class="a-f">Dom 08/11</td><td class="a-v"><span class="a-pct">10%</span></td></tr><tr class="a-ex" data-adate="2026-11-05"><td class="a-n">📝</td><td class="a-f">Jue 05/11</td><td><b>Examen final</b><div class="a-tm"><span>Vía Aérea y Ventilador</span><span>Farmacología Anestésica 1</span><span>Dolor y Anestésicos Locales</span></div></td><td class="a-f">—</td><td class="a-v"><span class="a-pct">70%</span></td></tr></tbody></table>
+    </div><div class="acad-card acad-pane" id="acad-1" data-ini="2026-10-23" data-fin="2026-11-27" style="--u:#F59E0B;">
+      <div class="ac-h"><span class="ac-t">UDCA</span><span class="ac-m">23/10/2026 → 27/11/2026 · Talleres 30% · Parcial 30% · Final 40%</span></div>
+      <div class="ac-s">👥 Danna Zaray Cordob · Laura Valentina Rodríguez </div>
+      <table class="acad-table"><thead><tr><th>Sem</th><th>Fechas</th><th>Actividad</th><th>Entrega</th><th style="text-align:right;">Valor</th></tr></thead>
+      <tbody><tr class="a-ind" data-adate="2026-10-23"><td colspan="5">Inicio Vie 23/10 · semana de adaptación, sin taller. El 1.er taller empieza el lunes 26/10.</td></tr><tr data-adate="2026-10-26"><td class="a-n">Sem 1</td><td class="a-f">26/10 → 01/11</td><td>📗 <b>Vía Aérea y Ventilador</b></td><td class="a-f">Dom 01/11</td><td class="a-v"><span class="a-pct">6%</span></td></tr><tr data-adate="2026-11-02"><td class="a-n">Sem 2</td><td class="a-f">02/11 → 08/11</td><td>📗 <b>Farmacología Anestésica 1</b></td><td class="a-f">Dom 08/11</td><td class="a-v"><span class="a-pct">6%</span></td></tr><tr data-adate="2026-11-09"><td class="a-n">Sem 3</td><td class="a-f">09/11 → 15/11</td><td>📗 <b>Dolor y Anestésicos Locales</b></td><td class="a-f">Dom 15/11</td><td class="a-v"><span class="a-pct">6%</span></td></tr><tr class="a-ex" data-adate="2026-11-11"><td class="a-n">📝</td><td class="a-f">Mié 11/11</td><td><b>Parcial</b><div class="a-tm"><span>Vía Aérea y Ventilador</span><span>Farmacología Anestésica 1</span><span>Dolor y Anestésicos Locales</span></div></td><td class="a-f">—</td><td class="a-v"><span class="a-pct">30%</span></td></tr><tr data-adate="2026-11-16"><td class="a-n">Sem 4</td><td class="a-f">16/11 → 22/11</td><td>📗 <b>Farmacología Anestésica 2</b></td><td class="a-f">Dom 22/11</td><td class="a-v"><span class="a-pct">6%</span></td></tr><tr data-adate="2026-11-23"><td class="a-n">Sem 5</td><td class="a-f">23/11 → 27/11</td><td>📗 <b>Líquidos y NVPO</b></td><td class="a-f">Dom 29/11</td><td class="a-v"><span class="a-pct">6%</span></td></tr><tr class="a-ex" data-adate="2026-11-25"><td class="a-n">📝</td><td class="a-f">Mié 25/11</td><td><b>Examen final</b><div class="a-tm"><span>Farmacología Anestésica 2</span><span>Líquidos y NVPO</span><span>Caso clínico integrador</span></div></td><td class="a-f">—</td><td class="a-v"><span class="a-pct">40%</span></td></tr></tbody></table>
+    </div><div class="acad-card acad-pane" id="acad-2" data-ini="2026-10-26" data-fin="2026-11-06" style="--u:#EF4444;">
+      <div class="ac-h"><span class="ac-t">Rosario</span><span class="ac-m">26/10/2026 → 06/11/2026 · Talleres 30% · Final 70%</span></div>
+      <div class="ac-s">👥 Nicolás Pinto Osorio</div>
+      <table class="acad-table"><thead><tr><th>Sem</th><th>Fechas</th><th>Actividad</th><th>Entrega</th><th style="text-align:right;">Valor</th></tr></thead>
+      <tbody><tr data-adate="2026-10-26"><td class="a-n">Sem 1</td><td class="a-f">26/10 → 01/11</td><td>📗 <b>Vía Aérea y Ventilador</b></td><td class="a-f">Dom 01/11</td><td class="a-v"><span class="a-pct">15%</span></td></tr><tr data-adate="2026-11-02"><td class="a-n">Sem 2</td><td class="a-f">02/11 → 06/11</td><td>📗 <b>Farmacología Anestésica 1</b></td><td class="a-f">Dom 08/11</td><td class="a-v"><span class="a-pct">15%</span></td></tr><tr class="a-ex" data-adate="2026-11-05"><td class="a-n">📝</td><td class="a-f">Jue 05/11</td><td><b>Examen final</b><div class="a-tm"><span>Vía Aérea y Ventilador</span><span>Farmacología Anestésica 1</span></div></td><td class="a-f">—</td><td class="a-v"><span class="a-pct">70%</span></td></tr></tbody></table>
+    </div><div class="acad-card acad-pane" id="acad-3" data-ini="2026-10-30" data-fin="2026-11-15" style="--u:#8B5CF6;">
+      <div class="ac-h"><span class="ac-t">Ant. Nariño</span><span class="ac-m">30/10/2026 → 15/11/2026 · Talleres 30% · Final 70%</span></div>
+      <div class="ac-s">👥 Andres Felipe Campos Rojas · Daniel Felipe Rodríguez Pinto </div>
+      <table class="acad-table"><thead><tr><th>Sem</th><th>Fechas</th><th>Actividad</th><th>Entrega</th><th style="text-align:right;">Valor</th></tr></thead>
+      <tbody><tr class="a-ind" data-adate="2026-10-30"><td colspan="5">Inicio Vie 30/10 · semana de adaptación, sin taller. El 1.er taller empieza el lunes 02/11.</td></tr><tr data-adate="2026-11-02"><td class="a-n">Sem 1</td><td class="a-f">02/11 → 08/11</td><td>📗 <b>Vía Aérea y Ventilador</b></td><td class="a-f">Dom 08/11</td><td class="a-v"><span class="a-pct">15%</span></td></tr><tr data-adate="2026-11-09"><td class="a-n">Sem 2</td><td class="a-f">09/11 → 15/11</td><td>📗 <b>Farmacología Anestésica 1</b></td><td class="a-f">Dom 15/11</td><td class="a-v"><span class="a-pct">15%</span></td></tr><tr class="a-ex" data-adate="2026-11-11"><td class="a-n">📝</td><td class="a-f">Mié 11/11</td><td><b>Examen final</b><div class="a-tm"><span>Vía Aérea y Ventilador</span><span>Farmacología Anestésica 1</span></div></td><td class="a-f">—</td><td class="a-v"><span class="a-pct">70%</span></td></tr></tbody></table>
+    </div></div>
+  </section>
+
+</div>
+
+<footer class="foot"><div class="foot-in">
+  <div><b>Docente responsable:</b> Dr. Andrés Robayo · Especialista en Anestesiología y Reanimación</div>
+  <div class="copy">© 2026 Dr. Andrés Robayo · Uso académico interno exclusivo · Festivos: calendario oficial Colombia</div>
+</div></footer>
+<script>
+function showHospTab(t,btn,noScroll){
+  document.querySelectorAll('.hosp-panel').forEach(p=>{p.style.display='none';});
+  var el=document.getElementById('panel-'+t); if(el) el.style.display='';
+  document.querySelectorAll('.hosp-tab').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  if(el && !noScroll){ var y=el.getBoundingClientRect().top+window.scrollY-navH()-8; if(window.scrollY>y) window.scrollTo({top:y,behavior:'smooth'}); }
+}
+function toggleTabla(){
+  var on=document.body.classList.toggle('ver-tabla');
+  document.querySelectorAll('.ag-toggle').forEach(function(b){ b.textContent=on?'📋 Ver por día':'🔁 Ver como tabla'; });
+}
+function _hoy(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function goHoy(){
+  var t=_hoy(), wi=-1;
+  WEEKS.forEach(function(w,i){ if(t>=w.start && t<=w.end) wi=i; });
+  var wb=document.querySelector('.wp-btn[data-w="'+wi+'"]');
+  if(wi>=0 && wb) showWeek(String(wi),wb);
+  var list=[].slice.call(document.querySelectorAll('.ag-day[data-day="'+t+'"],th.day-h[data-day="'+t+'"]')).filter(function(x){return x.offsetParent!==null;});
+  var el=list[0]; if(!el) return;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-navH()-10,behavior:'smooth'});
+}
+(function(){
+  var t=_hoy();
+  var els=document.querySelectorAll('[data-day="'+t+'"]');
+  els.forEach(function(e){ e.classList.add('is-today'); });
+  if(els.length) document.querySelectorAll('.hoy-btn').forEach(function(b){ b.hidden=false; });
+})();
+function navH(){ var n=document.querySelector('.nav'); return n?n.offsetHeight:0; }
+function jumpTo(cls){
+  var list=[].slice.call(document.querySelectorAll('.'+cls));
+  var t=list.filter(function(x){return x.offsetParent!==null;})[0]||list[0]; if(!t) return;
+  window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-navH()-8,behavior:'smooth'});
+  if(cls==='sec-cards'){ var f=t.querySelector('.find input'); if(f) setTimeout(function(){f.focus({preventScroll:true});},350); }
+}
+function _nz(x){ return String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim(); }
+function findStu(inp){
+  var q=_nz(inp.value), sec=inp.closest('.seccion');
+  sec.querySelectorAll('.student-card').forEach(function(c){ c.style.display=(!q||_nz(c.getAttribute('data-name')).indexOf(q)>=0)?'':'none'; });
+}
+var WEEKS=[{"i":0,"start":"2026-10-19","end":"2026-10-25"},{"i":1,"start":"2026-10-26","end":"2026-11-01"},{"i":2,"start":"2026-11-02","end":"2026-11-08"},{"i":3,"start":"2026-11-09","end":"2026-11-15"},{"i":4,"start":"2026-11-16","end":"2026-11-22"},{"i":5,"start":"2026-11-23","end":"2026-11-27"}];
+function showWeek(sel,btn){
+  document.querySelectorAll('.wp-btn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  var all = (sel==='all');
+  var wk = all?null:WEEKS[parseInt(sel)];
+  // Cuadro semanal (tbody por semana)
+  document.querySelectorAll('.week-body').forEach(function(tb){
+    tb.style.display = (all || tb.getAttribute('data-week')===String(sel)) ? '' : 'none';
+  });
+  // Fichas individuales (filas por fecha)
+  document.querySelectorAll('tr[data-date]').forEach(function(tr){
+    var d=tr.getAttribute('data-date');
+    tr.style.display = (all || (wk && d>=wk.start && d<=wk.end)) ? '' : 'none';
+  });
+  document.querySelectorAll('.acad-card').forEach(function(c){
+    var vis=all || (wk && c.getAttribute('data-ini')<=wk.end && c.getAttribute('data-fin')>=wk.start); // tarjeta completa: todos los talleres de la rotación
+    var b=document.querySelector('.acad-btn[data-acad="'+c.id.replace('acad-','')+'"]');
+    if(b) b.style.display = vis ? '' : 'none';
+    if(!vis && c.classList.contains('on')) showAcad(null);
+  });
+}
+// Cronograma: un botón por universidad; muestra uno a la vez (otro clic lo cierra)
+function showAcad(i,btn,keep){
+  var open = i!==null && !(btn && btn.classList.contains('active') && !keep);
+  document.querySelectorAll('.acad-pane').forEach(function(p){ p.classList.toggle('on', open && p.id==='acad-'+i); });
+  document.querySelectorAll('.acad-btn').forEach(function(b){ b.classList.toggle('active', open && b.getAttribute('data-acad')===String(i)); });
+}
+function goAcad(i){
+  var b=document.querySelector('.acad-btn[data-acad="'+i+'"]');
+  if(!b) return;
+  if(b.style.display==='none' && typeof showWeek==='function') showWeek('all',document.querySelector('.wp-btn[data-w="all"]'));
+  showAcad(String(i),b,true);
+  var sec=document.querySelector('.acad-sec'); if(sec) window.scrollTo({top:sec.getBoundingClientRect().top+window.scrollY-8,behavior:'smooth'});
+}
+</script>
+</body></html>

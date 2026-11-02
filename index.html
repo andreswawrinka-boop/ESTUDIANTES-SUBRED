@@ -148,6 +148,7 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 .ph-tag{font-family:var(--mono);font-size:11.5px;font-weight:800;color:var(--c);border:2px solid var(--c);border-radius:999px;padding:3px 10px;white-space:nowrap}
 @media(min-width:981px){.tile{aspect-ratio:auto;min-height:270px}.t-emo{width:128px;height:128px;font-size:78px}.t-name{font-size:25px}.t-sub{font-size:14.5px}
   .tiles.t6 .tile{min-height:230px}.tiles.t6 .t-emo{width:108px;height:108px;font-size:64px}}
+@media(min-width:981px){.tiles.t4{grid-template-columns:repeat(4,1fr)}}
 .tiles.t7 .tile:last-child{grid-column:1/-1;aspect-ratio:auto;min-height:170px}
 @media(max-width:980px){.tiles{grid-template-columns:1fr 1fr}.tiles.t3 .tile:last-child{grid-column:1/-1;aspect-ratio:auto;min-height:190px}}
 
@@ -362,16 +363,16 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 <div class="acc">
 <div class="acc-t">Toca una caja para desplegarla</div>
 <div class="tiles t6">
-  <button type="button" class="tile" data-p="inicio" style="--c:#0033FF"><span class="t-num">01</span><span class="t-emo">👋</span><span class="t-name">Empieza aquí</span><span class="t-sub">Bienvenida · horarios · normas</span><span class="t-chev">▼</span></button>
-  <button type="button" class="tile" data-p="cronograma" style="--c:#FF4500"><span class="t-num">02</span><span class="t-emo">📅</span><span class="t-name">Cronograma y sala</span><span class="t-sub">Elige tu universidad</span><span class="t-chev">▼</span></button>
-  <button type="button" class="tile" data-p="syllabus" style="--c:#00A63E"><span class="t-num">03</span><span class="t-emo">🧠</span><span class="t-name">Syllabus y talleres</span><span class="t-sub">Un taller por semana</span><span class="t-chev">▼</span></button>
-  <button type="button" class="tile" data-p="evaluacion" style="--c:#7A00E6"><span class="t-num">04</span><span class="t-emo">📝</span><span class="t-name">Evaluación</span><span class="t-sub">Talleres · exámenes · notas</span><span class="t-chev">▼</span></button>
-  <button type="button" class="tile" data-p="practica" style="--c:#008FA8"><span class="t-num">05</span><span class="t-emo">🩺</span><span class="t-name">Evaluación práctica</span><span class="t-sub">Guía de práctica · nota diaria</span><span class="t-chev">▼</span></button>
-  <button type="button" class="tile" data-p="faq" style="--c:#C2006B"><span class="t-num">06</span><span class="t-emo">💬</span><span class="t-name">Preguntas frecuentes</span><span class="t-sub">Inasistencias · notas · canales</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="inicio" style="--c:#E8003D"><span class="t-num">01</span><span class="t-emo">👋</span><span class="t-name">Empieza aquí</span><span class="t-sub">Bienvenida · horarios · normas</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="cronograma" style="--c:#0057FF"><span class="t-num">02</span><span class="t-emo">📅</span><span class="t-name">Cronograma y sala</span><span class="t-sub">Todas las universidades</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="syllabus" style="--c:#E65C00"><span class="t-num">03</span><span class="t-emo">🧠</span><span class="t-name">Syllabus y talleres</span><span class="t-sub">Un taller por semana</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="evaluacion" style="--c:#00873E"><span class="t-num">04</span><span class="t-emo">📝</span><span class="t-name">Evaluación teórica</span><span class="t-sub">Talleres · exámenes · notas</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="practica" style="--c:#6A00D9"><span class="t-num">05</span><span class="t-emo">🩺</span><span class="t-name">Evaluación práctica</span><span class="t-sub">Guía de práctica · nota diaria</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="faq" style="--c:#007C9E"><span class="t-num">06</span><span class="t-emo">💬</span><span class="t-name">Preguntas frecuentes</span><span class="t-sub">Inasistencias · notas · canales</span><span class="t-chev">▼</span></button>
 </div>
 
 <!-- 01 · EMPIEZA AQUÍ -->
-<section class="panel" data-id="inicio" style="--c:#0033FF" hidden>
+<section class="panel" data-id="inicio" style="--c:#E8003D" hidden>
   <div class="panel-h"><span class="ph-emo">👋</span><h2>Empieza aquí</h2><span class="ph-tag">LECTURA OBLIGATORIA</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
     <div class="welcome">
@@ -387,7 +388,7 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
     <div class="wks">
       <button type="button" class="wk" style="--c:#FF5A00" onclick="abrirNormas(event)"><span class="wk-n">1</span><span class="wk-t"><b>📜 Lee el manual de normas</b><small>Lectura obligatoria antes de iniciar la rotación</small></span><span class="st go">ABRIR</span></button>
       <button type="button" class="wk" style="--c:#D7102A" onclick="irA('sec-traer')"><span class="wk-n">2</span><span class="wk-t"><b>🎒 Alista lo que debes traer</b><small>Esfero, fonendoscopio, carnet, candado y calculadora</small></span><span class="st go">VER ↓</span></button>
-      <button type="button" class="wk" style="--c:#FF4500" onclick="Portal.open('pregrado','cronograma',true)"><span class="wk-n">3</span><span class="wk-t"><b>📅 Busca tu cronograma y tu sala</b><small>Elige tu universidad y abre la distribución diaria</small></span><span class="st go">IR</span></button>
+      <button type="button" class="wk" style="--c:#FF4500" onclick="Portal.open('pregrado','cronograma',true)"><span class="wk-n">3</span><span class="wk-t"><b>📅 Busca tu cronograma y tu sala</b><small>Un solo documento para todas las universidades</small></span><span class="st go">IR</span></button>
       <button type="button" class="wk" style="--c:#00A63E" onclick="Portal.open('pregrado','syllabus',true)"><span class="wk-n">4</span><span class="wk-t"><b>🧠 Revisa el syllabus y tus talleres</b><small>Un taller por semana, en orden</small></span><span class="st go">IR</span></button>
     </div>
 
@@ -401,15 +402,25 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
     </div>
     <div class="note" style="--c:#D7102A">El <b>carnet</b> se deja como garantía del uniforme quirúrgico · el <b>candado</b> es para tu locker · la <b>calculadora</b> es obligatoria en los exámenes · la <b>bata</b> solo los días de consulta externa o interconsultas.</div>
 
+    <div class="sub-h" id="sec-indumentaria">🚫 Indumentaria en salas · OBLIGATORIO</div>
+    <div class="mini">
+      <div class="mn" style="--mc:#D7102A"><b>❌ Sin sacos ni chaquetas</b><p>Dentro de las salas de cirugía.</p></div>
+      <div class="mn" style="--mc:#D7102A"><b>❌ Sin joyas</b><p>Ni anillos, relojes, cadenas ni aretes grandes (solo aretes pequeños pegados al lóbulo).</p></div>
+      <div class="mn" style="--mc:#D7102A"><b>❌ Cámbiate completo</b><p>El traje quirúrgico <b>no va sobre la ropa de calle</b>.</p></div>
+      <div class="mn" style="--mc:#D7102A"><b>❌ No salgas con el traje</b><p>No circules con el traje quirúrgico por las áreas públicas del hospital.</p></div>
+      <div class="mn" style="--mc:#00A84F"><b>✅ Presentación</b><p>Cabello recogido · uñas cortas sin esmalte · sin perfume fuerte.</p></div>
+      <div class="mn" style="--mc:#00A84F"><b>✅ Al terminar</b><p>Gorro, polainas y tapabocas a la <b>caneca roja</b>; devuelve el uniforme y recupera tu carnet.</p></div>
+    </div>
+
     <div class="sub-h" id="sec-horarios">⏰ Horarios</div>
     <table class="tbl">
       <thead><tr><th>Jornada</th><th>Horario</th><th>Detalle</th></tr></thead>
       <tbody>
         <tr><th scope="row">Lunes a viernes</th><td><span class="pill" style="--pc:#0047FF">7:00 a.m. – 4:00 p.m.</span></td><td>Ingreso a salas 6:50 a.m. · almuerzo 1 h entre 12:00 y 2:00 p.m. con autorización</td></tr>
-        <tr><th scope="row">Noche entre semana</th><td><span class="pill" style="--pc:#5B12D6">7:00 a.m. → 7:00 a.m.</span></td><td>Sala 7:00 a.m.–1:00 p.m. · preturno 1:00–7:00 p.m. · noche 7:00 p.m.–7:00 a.m.</td></tr>
+        <tr><th scope="row">Noche entre semana</th><td><span class="pill" style="--pc:#5B12D6">7:00 a.m. → 7:00 a.m.</span></td><td>Sala 7:00 a.m.–1:00 p.m. · preturno 1:00–7:00 p.m. · noche 7:00 p.m.–7:00 a.m. · <b>noche solo en base Kennedy</b></td></tr>
         <tr><th scope="row">Noche fin de semana / festivo</th><td><span class="pill" style="--pc:#C2006B">7:00 p.m. – 7:00 a.m.</span></td><td>Solo nocturno, sin fase diurna</td></tr>
-        <tr><th scope="row">Urgencias sala de cirugía</th><td><span class="pill" style="--pc:#D7102A">7:00 a.m. – 5:00 p.m.</span></td><td>Sábado, domingo o festivo asignado</td></tr>
-        <tr><th scope="row">Posturno</th><td><span class="pill" style="--pc:#00594F">Desde 7:00 a.m.</span></td><td>Libre el día siguiente al turno de noche</td></tr>
+        <tr><th scope="row">Urgencias sala de cirugía</th><td><span class="pill" style="--pc:#D7102A">7:00 a.m. – 5:00 p.m.</span></td><td><b>OBLIGATORIO: 1 por estudiante</b>, de día, sábado o domingo asignado · Kennedy en Kennedy, Bosa en Bosa</td></tr>
+        <tr><th scope="row">Posturno</th><td><span class="pill" style="--pc:#00594F">Desde 7:00 a.m.</span></td><td>Firmas presencia a las 7:00 a.m. y quedas libre (sin sala)</td></tr>
       </tbody>
     </table>
 
@@ -427,35 +438,41 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
       <div class="mn" style="--mc:#00594F"><b>🌅 Final</b><p>El turno termina a las <b>7:00 a.m.</b> e inicia el posturno.</p></div>
     </div>
 
+    <div class="sub-h" id="sec-ingreso">📋 Al llegar a tu sala · 7:00 a.m.</div>
+    <div class="exparts">
+      <div class="part" style="--c:#00A84F"><span class="pn">1</span><div><b>Lavado de manos</b><p>Técnica OMS (abajo) antes de tocar al paciente o los implementos.</p></div></div>
+      <div class="part" style="--c:#00A84F"><span class="pn">2</span><div><b>Historia clínica</b><p>Diagnóstico, antecedentes, alergias, medicamentos y plan anestésico.</p></div></div>
+      <div class="part" style="--c:#00A84F"><span class="pn">3</span><div><b>Anamnesis</b><p>Identidad, procedimiento, ayuno y consentimiento informado.</p></div></div>
+      <div class="part" style="--c:#00A84F"><span class="pn">4</span><div><b>Vía aérea</b><p>Mallampati, apertura bucal, extensión cervical y distancia tiromentoniana.</p></div></div>
+      <div class="part" style="--c:#00A84F"><span class="pn">5</span><div><b>Implementos</b><p>Máscara laríngea (talla), laringoscopio y hojas, cánula de Guedel y tubos orotraqueales.</p></div></div>
+    </div>
+    <div class="tl-h" id="sec-lavado" style="margin-top:20px">🧼 Lavado de manos OMS · 40–60 segundos</div>
+    <div class="exparts">
+      <div class="part" style="--c:#008FA8"><span class="pn">1</span><div><p>Moja las manos con agua limpia y corriente; cierra el grifo.</p></div></div>
+      <div class="part" style="--c:#008FA8"><span class="pn">2</span><div><p>Aplica jabón suficiente para cubrir toda la superficie.</p></div></div>
+      <div class="part" style="--c:#008FA8"><span class="pn">3</span><div><p>Frota palma con palma y el dorso con la palma opuesta.</p></div></div>
+      <div class="part" style="--c:#008FA8"><span class="pn">4</span><div><p>Palmas enfrentadas, dedos entrelazados: frota entre los dedos.</p></div></div>
+      <div class="part" style="--c:#008FA8"><span class="pn">5</span><div><p>Dorso de los dedos contra la palma (gancho) y frota los pulgares.</p></div></div>
+      <div class="part" style="--c:#008FA8"><span class="pn">6</span><div><p>Puntas de los dedos en círculo sobre la palma; enjuaga y seca con toalla de un solo uso.</p></div></div>
+    </div>
+
     <div class="sub-h" id="sec-normas">📜 Manual de normas</div>
     <button type="button" class="cta" style="--cc:#FF5A00" onclick="abrirNormas(event)"><span class="cta-emo">📜</span><span class="cta-t"><b>Normas de Rotación · Anestesiología</b><small>Libro de 12 páginas: horarios, ingreso a salas, evaluación, ausencias, conflictos y accidentes.</small></span><span class="cta-go">LEER ↗</span></button>
   </div>
 </section>
 
 <!-- 02 · CRONOGRAMA Y SALA -->
-<section class="panel" data-id="cronograma" style="--c:#FF4500" hidden>
+<section class="panel" data-id="cronograma" style="--c:#0057FF" hidden>
   <div class="panel-h"><span class="ph-emo">📅</span><h2>Mi cronograma y mi sala</h2><span class="ph-tag">6 UNIVERSIDADES</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
-    <p class="lead">Elige tu universidad para ver tu cronograma y tu distribución diaria.</p>
-    <div class="upick">
-      <div><div class="up-gt" style="--hc:#0047FF">Hospital de Kennedy</div><div class="uchips">
-        <button type="button" class="uchip" data-u="bosque" style="--uc:#00A84F" onclick="elegirUni('bosque')"><span>🌳</span>El Bosque</button>
-        <button type="button" class="uchip" data-u="sabana" style="--uc:#C2006B" onclick="elegirUni('sabana')"><span>🎓</span>La Sabana</button>
-        <button type="button" class="uchip" data-u="smartin" style="--uc:#0047FF" onclick="elegirUni('smartin')"><span>🐎</span>San Martín</button>
-      </div></div>
-      <div><div class="up-gt" style="--hc:#D7102A">Hospital de Bosa</div><div class="uchips">
-        <button type="button" class="uchip" data-u="rosario" style="--uc:#D7102A" onclick="elegirUni('rosario')"><span>📕</span>Rosario</button>
-        <button type="button" class="uchip" data-u="uan" style="--uc:#5B12D6" onclick="elegirUni('uan')"><span>🎨</span>Antonio Nariño</button>
-        <button type="button" class="uchip" data-u="udca" style="--uc:#FF5A00" onclick="elegirUni('udca')"><span>🧪</span>UDCA</button>
-      </div></div>
-    </div>
-    <div class="up-empty" id="up-empty">👆 Toca tu universidad</div>
-    <div id="upanels"></div>
+    <p class="lead">Un solo documento con el cronograma y la distribución diaria de salas de <b>todas las universidades</b>. Busca tu nombre y revisa tu sala o actividad de cada día.</p>
+    <a class="cta" style="--cc:#FF4500" href="cronograma-universidades.html"><span class="cta-emo">📅</span><span class="cta-t"><b>Rotación y cronograma</b><small>Talleres, exámenes, turnos y distribución diaria de salas · 6 universidades</small></span><span class="cta-go">ABRIR ↗</span></a>
+    <div class="note" style="--c:#FF5A00">🔀 <b>Reasignación:</b> por la cantidad de estudiantes, algunos días los estudiantes de base Kennedy son reasignados al <b>Hospital de Tintal</b> o al <b>Hospital de Bosa</b>. <b>REVISA LA DISTRIBUCIÓN CADA DÍA.</b></div>
   </div>
 </section>
 
 <!-- 03 · SYLLABUS Y TALLERES -->
-<section class="panel" data-id="syllabus" style="--c:#00A63E" hidden>
+<section class="panel" data-id="syllabus" style="--c:#E65C00" hidden>
   <div class="panel-h"><span class="ph-emo">🧠</span><h2>Syllabus y talleres</h2><span class="ph-tag">1 TALLER POR SEMANA</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
     <div class="sub-h" id="sec-talleres">📗 Talleres · teoría + taller autocalificable</div>
@@ -480,8 +497,8 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 </section>
 
 <!-- 04 · EVALUACIÓN -->
-<section class="panel" data-id="evaluacion" style="--c:#7A00E6" hidden>
-  <div class="panel-h"><span class="ph-emo">📝</span><h2>Evaluación de la rotación</h2><span class="ph-tag">NOTA ACADÉMICA</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
+<section class="panel" data-id="evaluacion" style="--c:#00873E" hidden>
+  <div class="panel-h"><span class="ph-emo">📝</span><h2>Evaluación teórica</h2><span class="ph-tag">NOTA ACADÉMICA</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
     <div class="sub-h" id="sec-nota">📊 Composición de la nota</div>
     <div class="ex3">
@@ -508,7 +525,7 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 </section>
 
 <!-- 05 · EVALUACIÓN PRÁCTICA -->
-<section class="panel" data-id="practica" style="--c:#008FA8" hidden>
+<section class="panel" data-id="practica" style="--c:#6A00D9" hidden>
   <div class="panel-h"><span class="ph-emo">🩺</span><h2>Evaluación práctica</h2><span class="ph-tag">SOLO ESTUDIANTES</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
     <p class="lead">Tu desempeño en salas se evalúa con un <b>examen práctico</b> y con la <b>calificación diaria de los docentes</b>, que se registra en una app a la que solo tienen acceso los profesores. <b>YA NO EXISTE EL FORMATO IMPRESO DE CALIFICACIÓN DIARIA.</b></p>
@@ -539,7 +556,7 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 
 
 <!-- 06 · FAQ -->
-<section class="panel" data-id="faq" style="--c:#C2006B" hidden>
+<section class="panel" data-id="faq" style="--c:#007C9E" hidden>
   <div class="panel-h"><span class="ph-emo">💬</span><h2>Preguntas frecuentes</h2><span class="ph-tag">8 PREGUNTAS</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
   <div class="body">
     <p class="lead">Consulta aquí antes de escribir al chat.</p>
@@ -575,7 +592,7 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
     <div class="chips">
       <span class="chip" style="--c:#00594F"><i>🗓️</i>1 o 2 meses</span>
       <span class="chip" style="--c:#0047FF"><i>📗</i>1 taller por semana</span>
-      <span class="chip" style="--c:#FFC400"><i>📝</i>Parcial + final</span>
+      <span class="chip" style="--c:#FFC400"><i>📝</i>Talleres 30% · exposiciones 10% · exámenes 60%</span>
       <span class="chip" style="--c:#FF5A00"><i>🌙</i>Posturno libre</span>
     </div>
   </div>
@@ -584,10 +601,11 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
 <main class="wrap">
 <div class="acc">
 <div class="acc-t">Toca una caja para desplegarla</div>
-<div class="tiles t3">
+<div class="tiles t4">
   <button type="button" class="tile" data-p="syllabus" style="--c:#0033FF"><span class="t-num">01</span><span class="t-emo">🗺️</span><span class="t-name">Syllabus</span><span class="t-sub">Tu tema de cada semana</span><span class="t-chev">▼</span></button>
   <button type="button" class="tile" data-p="talleres" style="--c:#00A63E"><span class="t-num">02</span><span class="t-emo">🧠</span><span class="t-name">Talleres</span><span class="t-sub">Uno por semana</span><span class="t-chev">▼</span></button>
   <button type="button" class="tile" data-p="turnos" style="--c:#FF4500"><span class="t-num">03</span><span class="t-emo">📅</span><span class="t-name">Turnos y cronograma</span><span class="t-sub">Fechas · noches · urgencias</span><span class="t-chev">▼</span></button>
+  <button type="button" class="tile" data-p="evaluacion" style="--c:#7A00E6"><span class="t-num">04</span><span class="t-emo">📝</span><span class="t-name">Evaluación</span><span class="t-sub">Cómo se compone tu nota</span><span class="t-chev">▼</span></button>
 </div>
 <section class="panel" data-id="syllabus" style="--c:#0033FF" hidden>
   <div class="panel-h"><span class="ph-emo">🗺️</span><h2>Syllabus · un tema por semana</h2><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
@@ -638,6 +656,18 @@ a.wk:hover,button.wk:hover{box-shadow:inset 0 0 0 3px var(--c)}
       <div class="mn"><b>🔄 Cambios</b><p>Ningún cambio de turno sin autorización del coordinador académico.</p></div>
     </div>
     <button type="button" class="btn" style="--c:#FF5A00" onclick="abrirNormas(event)">📜 Leer el manual de normas de rotación</button>
+  </div>
+</section>
+<section class="panel" data-id="evaluacion" style="--c:#7A00E6" hidden>
+  <div class="panel-h"><span class="ph-emo">📝</span><h2>Evaluación de la rotación</h2><span class="ph-tag">NOTA ACADÉMICA</span><button type="button" class="ph-x" aria-label="Cerrar">✕</button></div>
+  <div class="body">
+    <div class="sub-h" id="sec-nota-int">📊 Composición de la nota final teórica</div>
+    <div class="ex3">
+      <div class="ex" style="--c:#00A84F"><div class="ex-h"><b>Talleres</b><small>Uno por semana · entrega el domingo</small></div><div class="ex-r">📗 Promedio de talleres<span class="big">30%</span></div></div>
+      <div class="ex" style="--c:#FF5A00"><div class="ex-h"><b>Exposiciones</b><small>Presentación académica</small></div><div class="ex-r">🎤 Exposiciones<span class="big">10%</span></div></div>
+      <div class="ex" style="--c:#0047FF"><div class="ex-h"><b>Exámenes</b><small>Parcial (día 15) y examen final</small></div><div class="ex-r">🖥️ Exámenes<span class="big">60%</span></div></div>
+    </div>
+    <div class="note" style="--c:#7A00E6">📊 <b>Nota final teórica = talleres 30% + exposiciones 10% + exámenes 60%</b>. El parcial se presenta el día 15 de la rotación y el final, el último día (o el último día antes de vacaciones).</div>
   </div>
 </section>
 </div>
@@ -798,30 +828,6 @@ function abrirSyl(k){
   try{ const w = window.open(b64url('syl-' + k, SYL_B64[k]), '_blank'); if(!w) location.href = b64url('syl-' + k, SYL_B64[k]); }
   catch(e){ location.href = SYL_FALLBACK[k]; }
 }
-
-// ═══ Universidades (pregrado) ═══
-const UNIS = {
-  bosque:{n:'Universidad El Bosque',e:'🌳',c:'#00A84F',base:'Kennedy',dur:'3 o 4 semanas (según el grupo)',file:'cronograma-bosque.html'},
-  sabana:{n:'Universidad de La Sabana',e:'🎓',c:'#C2006B',base:'Kennedy',dur:'2–3 semanas',file:'cronograma-sabana.html'},
-  smartin:{n:'Fundación Universitaria San Martín',e:'🐎',c:'#0047FF',base:'Kennedy',dur:'2–3 semanas',file:'cronograma-smartin.html'},
-  rosario:{n:'Universidad del Rosario',e:'📕',c:'#D7102A',base:'Bosa',dur:'2–3 semanas',file:'cronograma-rosario.html'},
-  uan:{n:'Universidad Antonio Nariño',e:'🎨',c:'#5B12D6',base:'Bosa',dur:'2–3 semanas',file:'cronograma-uan.html'},
-  udca:{n:'UDCA — Ciencias Aplicadas y Ambientales',e:'🧪',c:'#FF5A00',base:'Bosa',dur:'6 semanas',file:'cronograma-udca.html'}
-};
-function elegirUni(k){
-  const u = UNIS[k]; if(!u) return;
-  document.querySelectorAll('.uchip').forEach(b => b.classList.toggle('on', b.dataset.u === k));
-  document.getElementById('up-empty').hidden = true;
-  document.getElementById('upanels').innerHTML =
-    '<div class="upanel" style="--uc:'+u.c+'"><div class="up-h"><span class="up-e">'+u.e+'</span><div><b>'+u.n+'</b><small>Base: Hospital de '+u.base+' · Rotación de '+u.dur+'</small></div></div>'+
-    '<div class="up-b"><div class="up-btns">'+
-      '<a class="cta" style="--cc:'+u.c+'" href="'+u.file+'"><span class="cta-emo">📅</span><span class="cta-t"><b>Mi cronograma</b><small>Talleres, parcial y examen final</small></span><span class="cta-go">ABRIR</span></a>'+
-      '<a class="cta" style="--cc:#0B2545" href="distribucion.html"><span class="cta-emo">🏥</span><span class="cta-t"><b>Distribución diaria</b><small>Mi sala o actividad de cada día</small></span><span class="cta-go">ABRIR</span></a>'+
-    '</div>'+(u.base==='Kennedy'?'<div class="note" style="--c:#FF5A00">🔀 <b>Reasignación:</b> por la cantidad de estudiantes, algunos días los estudiantes de base Kennedy son reasignados al <b>Hospital de Tintal</b> o al <b>Hospital de Bosa</b>. Revisa la distribución cada día.</div>':'')+
-    '</div></div>';
-  try{ localStorage.setItem('portal_univ', k); }catch(e){}
-}
-(function(){ try{ const k = localStorage.getItem('portal_univ'); if(UNIS[k]) elegirUni(k); }catch(e){} })();
 
 // ═══ Navegación: grupo (pregrado / internos) + cajas ═══
 const Portal = (function(){

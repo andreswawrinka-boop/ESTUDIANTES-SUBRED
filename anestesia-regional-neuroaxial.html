@@ -611,6 +611,35 @@ select.mc-select { max-width:100%; min-width:0; }
 .nota-sub { font-family:var(--mono); font-size:12pt; font-weight:700; color:var(--navy) !important; margin:8px 0 14px; }
 @media(max-width:720px){ .toc ul { columns:1; } .three-col { grid-template-columns:1fr; } .nota-mod-grid { grid-template-columns:repeat(2,1fr) !important; } }
 
+/* ══ ENVÍO DEL TALLER ══ */
+.send-box{ background:#FFF4DC; border:3px solid #C77700; border-radius:16px; padding:22px 26px; margin:24px 0; }
+.send-box h3{ color:#4E2A00; font-size:12pt; margin:0 0 8px; }
+.send-box h3::before{ content:none; }
+.send-help{ font-size:10.5pt; color:#000; margin-bottom:14px; }
+.send-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 16px; }
+.send-grid label{ display:flex; flex-direction:column; gap:4px; font-family:var(--sans); font-size:9.5pt; font-weight:800; color:#4E2A00; text-transform:uppercase; letter-spacing:.04em; }
+.send-grid .id-input{ min-width:0; width:100%; background:#fff; font-size:11pt; text-transform:none; letter-spacing:0; font-weight:600; color:#000; border:2px solid #C77700; }
+.send-grid .id-input:disabled{ background:#FFE0A3; border-color:#8D4F00; }
+.send-chk{ display:inline-flex; align-items:center; gap:8px; margin:12px 0 4px; font-family:var(--sans); font-size:10.5pt; font-weight:700; color:#000; cursor:pointer; }
+.send-chk input{ width:18px; height:18px; accent-color:#8D4F00; }
+.send-btn{ display:block; width:100%; margin-top:14px; font-family:var(--sans); font-size:13pt; font-weight:800; letter-spacing:.06em; padding:15px 20px; background:linear-gradient(135deg,#6D3B00,#C77700); color:#fff; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 16px rgba(109,59,0,.35); transition:transform .12s, box-shadow .16s; }
+.send-btn:hover{ transform:translateY(-1px); box-shadow:0 8px 22px rgba(109,59,0,.45); }
+.send-btn:disabled{ background:#C62828; cursor:wait; transform:none; }
+.send-msg{ display:none; margin-top:12px; padding:12px 14px; border-radius:10px; font-family:var(--sans); font-size:10.5pt; font-weight:700; }
+.send-msg.err{ display:block; background:#FFEBEE; border:2px solid #C62828; color:#B71C1C; }
+.send-msg.info{ display:block; background:#FFF3E0; border:2px solid #E65100; color:#000; }
+.send-modal{ position:fixed; inset:0; z-index:10000; display:none; align-items:center; justify-content:center; padding:16px; background:rgba(42,20,0,.85); }
+.send-modal.open{ display:flex; }
+.send-card{ background:#fff; border-radius:20px; max-width:460px; width:100%; padding:28px 24px 22px; text-align:center; border-top:8px solid #2E7D32; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+.send-ok-ico{ width:64px; height:64px; margin:0 auto 10px; border-radius:50%; background:#2E7D32; color:#fff; font-size:34px; font-weight:800; line-height:64px; }
+.send-ok-tit{ font-family:'Bebas Neue',sans-serif; font-size:30px; letter-spacing:1.5px; color:#4E2A00; }
+.send-ok-body{ font-family:var(--sans); font-size:11pt; color:#000; margin:10px 0 6px; line-height:1.6; }
+.send-ok-body .nota-grande{ display:block; font-family:var(--mono); font-size:30px; font-weight:600; color:#2E7D32; margin:6px 0; }
+.mod-lock .correct-btn{ background:#2E7D32 !important; cursor:default; }
+.mod-lock select, .mod-lock input, .mod-lock .vf-btn{ cursor:not-allowed; }
+@media (max-width:640px){ .send-grid{ grid-template-columns:1fr; } .send-box{ padding:18px 16px; } }
+@media print{ .send-box,.send-modal{ display:none !important; } }
+
 </style>
 <style id="bk-css">
 /* ══════════ MODO LIBRO ══════════ */
@@ -1384,6 +1413,19 @@ body.bk:not(.bk-cont) .section-header{ flex-wrap:wrap; }
 <div class="part-banner">Parte VII — Integración<span>Secciones 17 y 22 de la teoría</span></div>
 <div class="module" id="mod-13" data-mod="13" data-part="I"><div class="module-header"><span class="module-tag">MÓDULO 13</span><span class="module-title">Caso integrado — Fractura de cadera en paciente anticoagulada</span><span class="module-pts">🤖 1.25 pts autocorregible</span></div><div class="module-body"><div class="ex-context">Mujer de <strong>82 años, 55 kg</strong>, fractura de cadera. Fibrilación auricular en <strong>apixabán 5 mg c/12 h</strong>; última dosis hace <strong>30 h</strong>. Creatinina 1.0 mg/dL. Dolor 9/10.</div><div class="ex-item" data-pts="0.5"><div class="ex-label"><span class="ex-num">13.1</span> Planeación preoperatoria <span class="ex-pts-auto">🤖 0.50 pts</span></div><div class="mc-row"><span class="mc-label">¿Puede realizarse la espinal ahora?</span><select class="mc-select" onchange="chk(this,'No: el apixabán en dosis alta requiere 72 h o un nivel residual aceptable (menor de 30 ng/mL)','fb59')"><option value="">— elegir —</option><option>Sí, el apixabán no contraindica el neuroeje</option><option>No: el apixabán en dosis alta requiere 72 h o un nivel residual aceptable (menor de 30 ng/mL)</option><option>Sí, si se administra plasma fresco congelado antes</option></select><span class="fb" id="fb59"></span></div><div class="mc-row"><span class="mc-label">Analgesia preoperatoria más adecuada mientras tanto</span><select class="mc-select" onchange="chk(this,'Bloqueo de la fascia ilíaca o PENG guiado por ultrasonido','fb60')"><option value="">— elegir —</option><option>Bloqueo de la fascia ilíaca o PENG guiado por ultrasonido</option><option>Epidural lumbar continua</option><option>Morfina intratecal</option></select><span class="fb" id="fb60"></span></div></div><div class="ex-item" data-pts="0.5"><div class="ex-label"><span class="ex-num">13.2</span> Evidencia y dosis <span class="ex-pts-auto">🤖 0.50 pts</span></div><div class="mc-row"><span class="mc-label">Según REGAIN (2021) y RAGA (2022), comparada con la general, la espinal en fractura de cadera…</span><select class="mc-select" onchange="chk(this,'No fue superior en mortalidad, deambulación ni delirio','fb61')"><option value="">— elegir —</option><option>Redujo a la mitad la mortalidad a 60 días</option><option>No fue superior en mortalidad, deambulación ni delirio</option><option>Duplicó el riesgo de delirio</option></select><span class="fb" id="fb61"></span></div><div class="mc-row"><span class="mc-label">Si al cumplirse el intervalo se hace la espinal, la dosis de bupivacaína 0.5 % más adecuada es…</span><select class="mc-select" onchange="chk(this,'7.5–10 mg','fb62')"><option value="">— elegir —</option><option>7.5–10 mg</option><option>15–20 mg</option><option>25 mg</option></select><span class="fb" id="fb62"></span></div></div><div class="ex-item" data-pts="0.25"><div class="ex-label"><span class="ex-num">13.3</span> Tromboprofilaxis posoperatoria <span class="ex-pts-auto">🤖 0.25 pts</span></div><div class="mc-row"><span class="mc-label">Tras una espinal de dosis única, la primera dosis de enoxaparina 40 mg puede darse…</span><select class="mc-select" onchange="chk(this,'Al menos 12 h después de la punción','fb63')"><option value="">— elegir —</option><option>Inmediatamente al terminar la cirugía</option><option>Al menos 12 h después de la punción</option><option>Solo después de 5 días</option></select><span class="fb" id="fb63"></span></div><button class="correct-btn" onclick="corregir(this)">Corregir Módulo 13 (1.25 pts)</button></div></div></div>
 
+<div class="send-box" id="sendBox">
+  <h3>📤 Enviar taller al docente</h3>
+  <p class="send-help">Escriba su nombre <strong>tal como aparece en la lista de la rotación</strong>. Al enviar, se califican <strong>todos</strong> los módulos con sus respuestas actuales y la nota llega directamente al docente. <strong>Solo se permite UN envío por estudiante.</strong></p>
+  <div class="send-grid">
+    <label>Primer nombre<input class="id-input" id="stN1" type="text" autocomplete="off" maxlength="40"></label>
+    <label>Primer apellido<input class="id-input" id="stA1" type="text" autocomplete="off" maxlength="40"></label>
+    <label>Segundo apellido<input class="id-input" id="stA2" type="text" autocomplete="off" maxlength="40"></label>
+    <label>Universidad<select class="id-input" id="stUni" autocomplete="off"><option value="">— Seleccione su universidad —</option><option>Universidad de La Sabana</option><option>Universidad El Bosque</option><option>Universidad San Martín</option><option>Universidad UDCA</option><option>Universidad Antonio Nariño</option><option>Universidad del Rosario</option></select></label>
+  </div>
+  <label class="send-chk"><input type="checkbox" id="stSin2" autocomplete="off" onchange="var a=document.getElementById('stA2');a.disabled=this.checked;if(this.checked)a.value='';"> No tengo segundo apellido</label>
+  <button type="button" class="send-btn" id="btnEnviar" onclick="enviarTaller()">📤 ENVIAR TALLER</button>
+  <div class="send-msg" id="sendMsg"></div>
+</div>
 <div class="download-box">
   <h3>📥 Descargar Taller</h3>
   <p style="font-family:var(--sans);font-size:11pt;margin-bottom:12px;">Complete su nombre y universidad antes de descargar. El PDF incorpora una marca de agua individual, código único y nota autocalificable.</p>
@@ -1399,6 +1441,16 @@ body.bk:not(.bk-cont) .section-header{ flex-wrap:wrap; }
 </div><!-- /taller-tab -->
 
 </div><!-- /page -->
+
+<div class="send-modal" id="sendModal" role="dialog" aria-modal="true">
+  <div class="send-card">
+    <div class="send-ok-ico">✓</div>
+    <div class="send-ok-tit">Taller enviado</div>
+    <div class="send-ok-body" id="sendOkBody"></div>
+    <button type="button" class="send-btn" onclick="terminarTaller()">Terminar y dejar el taller en blanco</button>
+  </div>
+</div>
+
 
 <script>
 
@@ -1575,6 +1627,89 @@ function dlPDF(){
   setTimeout(function(){ window.print(); },300);
 }
 
+</script>
+<script id="envio-taller-js">
+/* ═══════════ ENVÍO DEL TALLER AL GOOGLE SHEET (pestaña «Notas de talleres») ═══════════
+   Usa la MISMA calificación del taller (itemFraction): no cambia preguntas, puntajes ni nota. */
+var SHEETS_URL    = 'https://script.google.com/macros/s/AKfycbz1a0UhMA1WdJeyUk3npQxNpyuaXJJxSwmtBLvJNfGBehg_1htyoiOZ4u9_F2LfFvSg/exec';
+var CLAVE_TALLER  = 'taller-anestesia-2026';
+var TALLER_NOMBRE = 'Anestesia regional neuroaxial';
+
+function msgEnvio(txt, tipo){ var m=document.getElementById('sendMsg'); m.textContent=txt; m.className='send-msg'+(txt?' '+(tipo||'err'):''); }
+function limpiaNombre(x){ return String(x||'').replace(/\s+/g,' ').trim(); }
+function sinResponder(){
+  var n=0, t=document.getElementById('taller-tab');
+  t.querySelectorAll('.ex-item select').forEach(function(x){ if(selSpec(x) && !x.value) n++; });
+  t.querySelectorAll('input[data-ans]').forEach(function(x){ if(!x.value.trim()) n++; });
+  t.querySelectorAll('.vf-item').forEach(function(v){ if(vfSpec(v) && !v.querySelector('.vf-btn.sel')) n++; });
+  t.querySelectorAll('.ms-group').forEach(function(g){ if(!g.querySelector('input:checked')) n++; });
+  return n;
+}
+// Califica TODOS los módulos con las respuestas actuales (igual que oprimir «Corregir» en cada uno)
+function calificarTodo(){
+  document.querySelectorAll('#taller-tab .module').forEach(function(mod){
+    var n = mod.getAttribute('data-mod'), got = 0;
+    mod.querySelectorAll('.ex-item').forEach(function(it){ got += (parseFloat(it.getAttribute('data-pts'))||0) * itemFraction(it); });
+    pts[n] = got;
+  });
+  actualizarNotas();
+  var parts={}, raw=0, rawMax=0;
+  Object.keys(MAXM).forEach(function(n){ var v=pts[n]||0; raw+=v; rawMax+=MAXM[n]; parts[PARTOF[n]]=(parts[PARTOF[n]]||0)+v; });
+  var p=Object.keys(parts).map(function(k){ return k+': '+(Math.round(parts[k]*100)/100).toFixed(2); }).join(' · ');
+  return { fin: rawMax ? Math.round(raw/rawMax*5*100)/100 : 0, partes: p };
+}
+
+async function enviarTaller(){
+  if(window.__enviado) return;
+  var n1=limpiaNombre(document.getElementById('stN1').value);
+  var a1=limpiaNombre(document.getElementById('stA1').value);
+  var sin2=document.getElementById('stSin2').checked;
+  var a2=sin2?'':limpiaNombre(document.getElementById('stA2').value);
+  var uni=document.getElementById('stUni').value;
+  var letras=/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' -]+$/;
+  if(!n1||!a1) return msgEnvio('⚠ Escriba su primer nombre y su primer apellido.');
+  if(!sin2 && !a2) return msgEnvio('⚠ Escriba su segundo apellido o marque «No tengo segundo apellido».');
+  if(!letras.test(n1+a1+a2)) return msgEnvio('⚠ El nombre solo puede tener letras.');
+  if(!uni) return msgEnvio('⚠ Seleccione su universidad.');
+  if(SHEETS_URL.indexOf('script.google.com')<0) return msgEnvio('⚠ El envío aún no está configurado. Avise al docente.');
+
+  var faltan=sinResponder();
+  var aviso='Va a enviar el taller a nombre de:\n\n   '+[n1,a1,a2].filter(Boolean).join(' ')+'\n   '+uni+'\n\n';
+  if(faltan) aviso+='⚠ Tiene '+faltan+' respuesta(s) SIN contestar: valen 0.\n\n';
+  aviso+='Todos los módulos se califican ahora con sus respuestas actuales. Después del envío NO se puede modificar ni volver a enviar.\n\n¿Enviar?';
+  if(!confirm(aviso)) return;
+
+  var btn=document.getElementById('btnEnviar'); btn.disabled=true; btn.textContent='Enviando…';
+  msgEnvio('');
+  var nf=calificarTodo(), mods={};
+  Object.keys(MAXM).forEach(function(k){ mods['M'+k]=Math.round((pts[k]||0)*100)/100; });
+  var datos={ action:'taller', clave:CLAVE_TALLER, taller:TALLER_NOMBRE,
+    nombre1:n1, apellido1:a1, apellido2:a2, nombre:[n1,a1,a2].filter(Boolean).join(' '),
+    universidad:uni, nota:nf.fin, parte1:nf.partes, parte2:'', modulos:mods, codigo:generarCodigoUnico() };
+
+  var ctrl=('AbortController' in window)?new AbortController():null, tmo=setTimeout(function(){ if(ctrl) ctrl.abort(); },45000);
+  try{
+    var r=await fetch(SHEETS_URL,{ method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(datos), signal:ctrl?ctrl.signal:undefined });
+    var res=await r.json();
+    if(!res.ok) throw new Error(res.error||'No se pudo registrar la nota.');
+    window.__enviado=true;
+    document.querySelectorAll('#taller-tab input, #taller-tab select, #taller-tab .vf-btn, #taller-tab .correct-btn').forEach(function(x){ x.disabled=true; });
+    btn.disabled=true; btn.textContent='✓ Taller enviado';
+    var esc=function(t){ return String(t).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+    document.getElementById('sendOkBody').innerHTML='<b>'+esc(res.nombre||datos.nombre)+'</b><br>'+esc(res.universidad||uni)+'<br>'+esc(TALLER_NOMBRE)+'<span class="nota-grande">'+nf.fin.toFixed(2)+' / 5.00</span>Código: '+esc(datos.codigo)+'<br><small>Tome una captura de pantalla como comprobante.</small>';
+    document.getElementById('sendModal').classList.add('open');
+  }catch(e){
+    btn.disabled=false; btn.textContent='📤 ENVIAR TALLER';
+    var t=(e&&e.name==='AbortError')?'⚠ El servidor no respondió. Revise su conexión y vuelva a oprimir ENVIAR (sus respuestas siguen aquí).'
+         :(e instanceof TypeError)?'⚠ Sin conexión con el servidor. Revise su internet y vuelva a oprimir ENVIAR (sus respuestas siguen aquí).'
+         :'⚠ '+e.message;
+    msgEnvio(t);
+  }finally{ clearTimeout(tmo); }
+}
+function terminarTaller(){
+  try{ Object.keys(localStorage).forEach(function(k){ if(k.indexOf('bk:')===0) localStorage.removeItem(k); }); }catch(e){}
+  location.replace(location.pathname+location.search);
+}
 </script>
 <script id="bk-js">
 /* ══════════ MODO LIBRO ══════════ */

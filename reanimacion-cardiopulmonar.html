@@ -1412,5 +1412,83 @@ function terminarTaller(){
 }
 </script>
 
+<!-- ══ PROTECCIÓN DEL TALLER · © Omar Andrés Robayo Conde ══ -->
+<style id="prot-css">
+/* Sin selección de texto ni arrastre (excepto donde el estudiante escribe) */
+body{ -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; }
+input,textarea,select,[contenteditable="true"]{ -webkit-user-select:text; user-select:text; }
+img,svg{ -webkit-user-drag:none; user-drag:none; }
+/* Marca de agua con el correo del estudiante */
+#prot-wm{ position:fixed; inset:0; z-index:2147483000; pointer-events:none; overflow:hidden; }
+#prot-wm span{ position:absolute; white-space:nowrap; transform:rotate(-28deg);
+  font:700 13px/1 'DM Sans',system-ui,sans-serif; letter-spacing:1px; color:#0D47A1; opacity:.045; }
+/* Imprimir / Guardar como PDF: página bloqueada */
+#prot-print{ display:none; }
+@media print{
+  body > *:not(#prot-print){ display:none !important; }
+  #prot-print{ display:block !important; padding:60px 40px; text-align:center;
+    font:800 20pt 'DM Sans',system-ui,sans-serif; color:#B71C1C; }
+}
+#prot-aviso{ position:fixed; left:50%; bottom:24px; transform:translateX(-50%); z-index:2147483001;
+  background:#B71C1C; color:#fff; font:700 14px 'DM Sans',system-ui,sans-serif; padding:12px 20px;
+  border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,.25); opacity:0; transition:opacity .25s; pointer-events:none; }
+#prot-aviso.on{ opacity:1; }
+</style>
+<div id="prot-print">⛔ ESTE TALLER NO SE PUEDE IMPRIMIR NI GUARDAR.<br><br>Material protegido · © Omar Andrés Robayo Conde · Uso académico exclusivo de la rotación.</div>
+<div id="prot-aviso">⛔ Material protegido: no se permite copiar, guardar ni imprimir</div>
+<script id="prot-js">
+(function(){
+  var aviso=document.getElementById('prot-aviso'), tm=null;
+  function avisar(){ aviso.classList.add('on'); clearTimeout(tm); tm=setTimeout(function(){ aviso.classList.remove('on'); },1800); }
+  function editable(el){ return el && el.closest && el.closest('input,textarea,select,[contenteditable="true"]'); }
+
+  // Clic derecho / mantener presionado (guardar imagen, ver código, imprimir)
+  document.addEventListener('contextmenu',function(e){ if(!editable(e.target)){ e.preventDefault(); avisar(); } });
+  // Arrastrar imágenes o texto
+  document.addEventListener('dragstart',function(e){ if(!editable(e.target)){ e.preventDefault(); } });
+  // Copiar / cortar fuera de las casillas de respuesta
+  ['copy','cut'].forEach(function(ev){
+    document.addEventListener(ev,function(e){ if(!editable(document.activeElement)&&!editable(e.target)){ e.preventDefault(); avisar(); } });
+  });
+  // Atajos: Guardar, Imprimir, Ver código, Seleccionar todo, Herramientas de desarrollador
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(), mod=e.ctrlKey||e.metaKey;
+    var bloquear =
+      (mod && (k==='s'||k==='p'||k==='u')) ||
+      (mod && k==='a' && !editable(e.target)) ||
+      (mod && k==='c' && !editable(e.target)) ||
+      (mod && e.shiftKey && (k==='i'||k==='j'||k==='c'||k==='s')) ||
+      (e.altKey && e.metaKey && (k==='i'||k==='j'||k==='u')) ||
+      k==='f12';
+    if(bloquear){ e.preventDefault(); e.stopPropagation(); avisar(); }
+  },true);
+  window.addEventListener('beforeprint',avisar);
+
+  // Marca de agua con el correo del estudiante (Cloudflare Access)
+  function marca(texto){
+    var wm=document.getElementById('prot-wm');
+    if(!wm){ wm=document.createElement('div'); wm.id='prot-wm'; document.body.appendChild(wm); }
+    wm.innerHTML='';
+    var W=Math.max(window.innerWidth,800), H=Math.max(window.innerHeight,600);
+    for(var y=-60; y<H+120; y+=200){
+      for(var x=-200; x<W+200; x+=460){
+        var s=document.createElement('span');
+        s.textContent=texto; s.style.left=(x+(Math.round((y+60)/200)%2?230:0))+'px'; s.style.top=y+'px';
+        wm.appendChild(s);
+      }
+    }
+  }
+  var fecha=new Date().toLocaleDateString('es-CO');
+  var texto='© Dr. Andrés Robayo C. · Uso académico · '+fecha;
+  marca(texto);
+  if(window.fetch) fetch('/cdn-cgi/access/get-identity',{credentials:'include'})
+    .then(function(r){ return r.ok?r.json():null; })
+    .then(function(d){ if(d&&d.email){ texto=d.email+' · '+fecha+' · © Dr. Andrés Robayo C.'; marca(texto); } })
+    .catch(function(){});
+  var rt=null; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ marca(texto); },200); });
+})();
+</script>
+<!-- ══ FIN PROTECCIÓN ══ -->
+
 </body>
 </html>

@@ -67,6 +67,13 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
 .big b{display:block;font-family:var(--head);font-weight:700;font-size:22px;line-height:1.05}
 .big small{display:block;font-weight:700;font-size:13px;margin-top:3px}
 .big .tg{display:inline-block;background:#FFC400;color:var(--ink);border-radius:999px;font-family:var(--head);font-weight:700;font-size:11px;letter-spacing:.6px;padding:2px 9px;margin-bottom:5px}
+.crono-duo{margin-bottom:16px}
+.big.crono{padding:20px 22px;box-shadow:0 14px 28px -14px var(--c);transition:transform .14s,box-shadow .14s}
+.big.crono:hover{transform:translateY(-3px);box-shadow:0 20px 34px -14px var(--c)}
+.big.crono .ct{flex:1;min-width:0}
+.big.crono b{font-size:22px}
+.big.crono .go{flex:none;font-family:var(--head);font-weight:700;font-size:14px;letter-spacing:1px;background:#fff;color:var(--c);border-radius:999px;padding:9px 18px}
+@media(max-width:600px){.big.crono{padding:14px 14px;gap:12px}.big.crono b{font-size:19px}.big.crono small{font-size:12px}.big.crono .go{display:none}.big.crono .bi{width:50px;height:50px;font-size:26px;border-radius:14px}}
 .alert{margin-top:14px;border-radius:20px;background:#fff;border:3px solid #E0182D;padding:14px 18px;font-size:15.5px;font-weight:500;display:flex;gap:12px}
 .alert b{color:#E0182D}
 .alert .ai{font-size:26px}
@@ -112,7 +119,11 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
 
 <section class="panel" id="p-talleres" data-id="talleres" style="--c:#2340C8">
   <div class="ph"><h2>Talleres · <em>teoría + taller</em></h2><span class="tag">📗 1 TALLER POR SEMANA</span></div>
-  <p class="lead">🗓️ Consulta en <b>Canvas</b> el cronograma con los <b>talleres asignados según tu universidad</b>. Solo se permite <b>UN envío por taller</b> y el plazo es el <b>domingo 23:59 h</b>.</p>
+  <div class="duo crono-duo">
+    <a class="big crono" href="rotacion-y-cronograma.html" style="--c:#E35A00;--c2:#C2006B"><span class="bi">🎓</span><span class="ct"><span class="tg">ESTUDIANTES</span><b>Cronograma y distribución de salas</b><small>Talleres, sala de cada día, turnos y exámenes →</small></span><span class="go">ABRIR</span></a>
+    <a class="big crono" href="cronograma-internos.html" style="--c:#0E7A3E;--c2:#0090B8"><span class="bi">🩺</span><span class="ct"><span class="tg">INTERNOS</span><b>Cronograma y distribución</b><small>Talleres, exámenes, turnos y posturnos →</small></span><span class="go">ABRIR</span></a>
+  </div>
+  <p class="lead">🗓️ En el <b>cronograma</b> están los <b>talleres asignados según tu universidad</b>. Solo se permite <b>UN envío por taller</b> y el plazo es el <b>domingo 23:59 h</b>.</p>
   <div class="boxes">
 <a class="box" href="via-aerea-ventilador.html" style="--c:#2340C8;--c2:#0090B8"><span class="b-n">01</span><span class="b-e">🌬️</span><span class="b-t">Vía aérea y ventilador</span><span class="b-go">ABRIR →</span></a>
 <a class="box" href="farmacologia-anestesica-1.html" style="--c:#00897B;--c2:#00B37E"><span class="b-n">02</span><span class="b-e">💉</span><span class="b-t">Farmacología anestésica 1</span><span class="b-go">ABRIR →</span></a>

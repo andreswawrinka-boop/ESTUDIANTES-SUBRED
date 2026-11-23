@@ -105,6 +105,16 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
 .hero-t p{font-weight:600;font-size:14px;margin-top:8px;color:#fff}
 @media(max-width:600px){.hero-t{left:8px;bottom:8px;max-width:78%;padding:9px 11px;border-radius:14px}.hero-t h1{font-size:19px;letter-spacing:-.5px}.hero-t p{font-size:9.5px;margin-top:4px;line-height:1.25}}
 .hero-img{margin-bottom:6px}
+.tg-btn{width:100%;display:flex;align-items:center;gap:14px;margin:4px 0 0;border:0;cursor:pointer;text-align:left;border-radius:24px;padding:16px 20px;color:#fff;background:linear-gradient(135deg,#2340C8,#0090B8);box-shadow:0 14px 28px -14px #2340C8;font-family:var(--head);transition:transform .14s,box-shadow .14s}
+.tg-btn:hover{transform:translateY(-2px);box-shadow:0 20px 34px -14px #2340C8}
+.tg-btn .bi{width:54px;height:54px;flex:none;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:28px}
+.tg-btn .tt{flex:1;min-width:0}
+.tg-btn b{display:block;font-weight:700;font-size:22px;line-height:1.05}
+.tg-btn small{display:block;font-family:var(--body);font-weight:700;font-size:13px;margin-top:3px}
+.tg-btn .chev{width:40px;height:40px;flex:none;border-radius:50%;background:#fff;color:#2340C8;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;transition:transform .2s}
+.tg-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+#tg-body{padding-top:16px}
+@media(max-width:600px){.tg-btn{padding:12px 14px;gap:10px}.tg-btn b{font-size:18px}.tg-btn small{font-size:12px}.tg-btn .bi{width:46px;height:46px;font-size:24px}}
 </style>
 </head>
 <body>
@@ -124,6 +134,8 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
     <a class="big crono" href="cronograma-internos.html" style="--c:#0E7A3E;--c2:#0090B8"><span class="bi">🩺</span><span class="ct"><span class="tg">INTERNOS</span><b>Cronograma y distribución</b><small>Talleres, exámenes, turnos y posturnos →</small></span><span class="go">ABRIR</span></a>
   </div>
   <p class="lead">🗓️ En el <b>cronograma</b> están los <b>talleres asignados según tu universidad</b>. Solo se permite <b>UN envío por taller</b> y el plazo es el <b>domingo 23:59 h</b>.</p>
+  <button type="button" class="tg-btn" id="tg-toggle" aria-expanded="false" aria-controls="tg-body"><span class="bi">📚</span><span class="tt"><b>Talleres y material de apoyo</b><small>Toca para ver los 10 talleres, farmacología básica y la guía de práctica</small></span><span class="chev">▼</span></button>
+  <div id="tg-body" hidden>
   <div class="boxes">
 <a class="box" href="via-aerea-ventilador.html" style="--c:#2340C8;--c2:#0090B8"><span class="b-n">01</span><span class="b-e">🌬️</span><span class="b-t">Vía aérea y ventilador</span><span class="b-go">ABRIR →</span></a>
 <a class="box" href="farmacologia-anestesica-1.html" style="--c:#00897B;--c2:#00B37E"><span class="b-n">02</span><span class="b-e">💉</span><span class="b-t">Farmacología anestésica 1</span><span class="b-go">ABRIR →</span></a>
@@ -140,6 +152,7 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
   <div class="duo">
     <a class="big" href="farmacologia-basica.html" style="--c:#6A1FD1;--c2:#2340C8"><span class="bi">💊</span><span><b>Farmacología básica</b><small>Base para todos los talleres →</small></span></a>
     <a class="big" href="guia_practica.html" style="--c:#E0182D;--c2:#F26B00"><span class="bi">📘</span><span><span class="tg">EXAMEN PRÁCTICO</span><b>Guía de práctica</b><small>Estúdiala antes de la última semana →</small></span></a>
+  </div>
   </div>
   <div class="alert"><span class="ai">⚠️</span><span><b>DEBES ESTUDIAR LA GUÍA DE PRÁCTICA ANTES DE TU EXAMEN PRÁCTICO.</b> El examen se presenta cualquier día de la <b>última semana</b> de rotación y se califica por estaciones con lista de chequeo, <b>exactamente con los temas de esta guía</b>. Llega preparado desde el inicio de esa semana.</span></div>
 </section>
@@ -182,6 +195,8 @@ a{color:inherit;text-decoration:none} b{font-weight:800}
   var b=document.getElementById('brand'); if(b) b.addEventListener('click',function(e){e.preventDefault();show('talleres',false);window.scrollTo({top:0,behavior:'smooth'});});
   function fromHash(){var h=decodeURIComponent(location.hash.slice(1));show(MAP[h]||'talleres',!!MAP[h]);}
   window.addEventListener('hashchange',fromHash);
+  var tb=document.getElementById('tg-toggle'),tbody=document.getElementById('tg-body');
+  if(tb&&tbody) tb.addEventListener('click',function(){var open=tbody.hidden;tbody.hidden=!open;tb.setAttribute('aria-expanded',open);});
   fromHash();
 })();
 </script>
